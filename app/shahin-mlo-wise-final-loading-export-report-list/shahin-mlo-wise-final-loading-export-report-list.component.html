@@ -1,0 +1,114 @@
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <table class=" table-hover" align="center">
+                <tr>
+                    <td>
+                        <img align="center" src="../../assets/img/cpanew.jpg" class="rounded mx-auto mt-2 d-block" 
+                            width="250px" height="80px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4 align="center"><b>MLO WISE  CONTAINER LOADING LIST FOR {{rotation_no}}</b></h4>
+                        <h3  align="center"> Vessel Name:{{vsl_Name}}  Berth: {{ berth}}    EXP ROT.: {{rotation_no}}   Berth Operator: {{berth_op}} </h3>
+                    </td>
+                </tr>
+
+            
+            </table>
+        </div>
+    </div>
+    
+
+
+
+    <div style="margin-top:20px; margin-left:20px;margin-right:10px ;">
+
+
+
+        <table  border='1' class="table table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive">
+            <tr>
+                <td rowspan="2" align="center"><b>MLO</b></td>
+                <td colspan="11" align="center"><b>LADEN</b></td>
+                <td colspan="11" align="center"><b>EMPTY</b></td>
+                <td rowspan="2" align="center"><b>TOTAL CONTS</b></td>
+                <td rowspan="2" align="center"><b>TOTAL TEUS</b></td>
+                <td rowspan="2" align="center"><b>WEIGHT</b></td>
+            </tr>
+            <tr height="40px" align="center">
+              
+                <td><b>2D</b></td>
+                <td><b>4D</b></td>
+                <td><b>4H</b></td>
+                <td><b>45H</b></td>
+                <td><b>4RH</b></td>
+                <td><b>2RF</b></td>
+                <td><b>2OT</b></td>
+                <td><b>2FR</b></td>
+                <td><b>2TK</b></td>
+                <td><b>4FR</b></td>
+                <td><b>4OT</b></td>
+                <td><b>2D</b></td>
+                <td><b>4D</b></td>
+                <td><b>4H</b></td>
+                <td><b>45H</b></td>
+                <td><b>4RH</b></td>
+                <td><b>2RF</b></td>
+                <td><b>2OT</b></td>
+                <td><b>2FR</b></td>
+                <td><b>2TK</b></td>
+                <td><b>4FR</b></td>
+                <td><b>4OT</b></td>
+            
+
+            </tr>
+
+            <tr align="center"  *ngFor="let containerLoadingExcelReport of exportContainerLoadingExcelReport;let i=index;">
+            
+                <td>{{containerLoadingExcelReport.mlo}}</td>
+                <td>{{containerLoadingExcelReport.d_20}}</td>
+                <td>{{containerLoadingExcelReport.d_40}}</td>
+                <td>{{containerLoadingExcelReport.h_40}}</td>
+                <td>{{containerLoadingExcelReport.h_45}}</td>
+                
+                <td>{{containerLoadingExcelReport.rh_40}}</td>
+                <td>{{containerLoadingExcelReport.r_20}}</td>
+                
+                
+                <td>{{containerLoadingExcelReport.ot_20}}</td>
+                <td>{{containerLoadingExcelReport.fr_20}}</td>
+                <td>{{containerLoadingExcelReport.tk_20}}</td>
+                
+                <td>{{containerLoadingExcelReport.fr_40}}</td>
+                <td>{{containerLoadingExcelReport.ot_40}}</td>
+                
+                <td>{{containerLoadingExcelReport.md_20}}</td>
+                <td>{{containerLoadingExcelReport.md_40}}</td>
+                <td>{{containerLoadingExcelReport.mh_40}}</td>
+                <td>{{containerLoadingExcelReport.mh_45}}</td>
+                
+                <td>{{containerLoadingExcelReport.mrh_40}}</td>
+                <td>{{containerLoadingExcelReport.mr_20}}</td>		
+                
+                
+                <td>{{containerLoadingExcelReport.mot_20}}</td>
+                <td>{{containerLoadingExcelReport.mfr_20}}</td>
+                <td>{{containerLoadingExcelReport.mtk_20}}</td>
+                
+                <td>{{containerLoadingExcelReport.mfr_40}}</td>
+                <td>{{containerLoadingExcelReport.mot_40}}</td>
+                
+                <td>{{containerLoadingExcelReport.grand_tot}}</td>
+                <td>{{containerLoadingExcelReport.tues}}</td>
+                <td>{{containerLoadingExcelReport.weight}}</td>
+            </tr>
+
+        </table>
+
+
+    </div>

@@ -1,0 +1,73 @@
+<div class="row">
+
+    <div class="col-12">
+
+    
+
+
+      
+
+        <div>
+
+            <h3 style="margin-left:450px;">CHITTAGONG PORT AUTHORITY,CHITTAGONG</h3>
+            <h4 style="margin-left:520px;">MLO Wise Pre Advice Container Report</h4>
+            <h4 style="margin-left:580px;"> NAME OF MLO:{{ MLO}}</h4>
+       
+          
+            <div class="row" style="margin-left:5px;margin-right: 5px;">
+
+
+                <div class="col-md-12" >
+
+                 
+                    <table class="table table-bordered table-hover">
+                        <thead>
+
+
+                            <tr align="center">
+                                <td style="border-width:1px;border-style: double;" ><b>SlNo.</b></td>
+                                <td style="border-width:1px;border-style: double;"><b>CONTAINER NO.</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>SIZE.</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>Weight.</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>SEAL NO.</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>MLO.</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>TYPE.</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>COMING FROM.</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>VESSEL NAME.</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>ROTATION.</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>PREADVISED DATE..</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>STATUS.</b></td>
+                                <td style="border-width:1px;border-style: double;" ><b>PORT.</b></td>
+                            </tr>
+                    </thead>
+                        <tbody>
+                      
+                            <tr *ngFor="let mloWisePreAdvisedList of MloWisePreAdvisedList; let i=index; ">
+
+                                <td>{{i+1}}</td>
+                               <td>{{mloWisePreAdvisedList.cont_id}}</td>
+                               <td>{{mloWisePreAdvisedList.cont_size}}</td>
+                               
+                               <td>{{mloWisePreAdvisedList.goods_and_ctr_wt_kg}}</td>
+                               <td>{{mloWisePreAdvisedList.seal_no}}</td>
+                               <td>{{mloWisePreAdvisedList.cont_mlo}}</td>
+                               
+                               <td>{{mloWisePreAdvisedList.isoType}}</td>
+                               <td>{{mloWisePreAdvisedList.offdock}}</td>
+                               <td>{{mloWisePreAdvisedList.vsl_name}}</td>
+                            
+                               <td>{{mloWisePreAdvisedList.rotation}}</td>
+                               <td>{{mloWisePreAdvisedList.last_update}}</td>
+                               <td>{{mloWisePreAdvisedList.cont_status}}</td>
+                               <td>{{mloWisePreAdvisedList.pod}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+     
+    </div>
+</div>

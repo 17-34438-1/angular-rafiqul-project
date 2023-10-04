@@ -1,0 +1,70 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <table class=" table-hover" align="center">
+            <tr>
+                <td>
+                    <img align="center" src="../../assets/img/cpanew.jpg" class="rounded mx-auto mt-2 d-block" 
+                        width="250px" height="80px">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4 align="center"><b>Export Copino</b></h4>
+                    <h3  align="center"> Vessel Name:{{vname}}      Rotation No:{{ rotation_no}}</h3>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+    <div>
+        <table  width="100%" border='1' cellpadding='0' cellspacing='0' class="table table-bordered table-condensed  table-hover table-fixed  table-responsive-sm">
+            <thead>
+                <tr>
+                    <th align="center">S No.</th>
+                    <th align="center">ContainerNo</th>
+                    <th align="center">Size</th>
+                    <th align="center">Height</th>
+                    <th align="center">ISO Code</th>
+                    <th align="center">MLO Code</th>
+                    <th align="center">Status</th>
+                    <th align="center">Weitht</th>
+                    <th align="center">SealNo</th>
+                    <th align="center">ComingFrom</th>
+                    <th align="center">POD</th>
+                    <th align="center">PermissionNo.</th>
+                    <th align="center">Commodity</th>
+                    <th align="center">POL</th>
+                    <th align="center">Remarks</th>
+    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let copinoData of copinoInfo;let i=index;">
+                    <td align="center">{{i+1}}</td>
+                    <td align="center">{{copinoData.cont_id}}</td>
+                    <td align="center">{{copinoData.cont_size}}</td>
+                    <td align="center">{{copinoData.cont_height}}</td>
+                    <td align="center">{{copinoData.isoType}}</td>
+                    <td align="center">{{copinoData.cont_mlo}}</td>
+                    <td align="center">{{copinoData.cont_status}}</td>
+                    <td align="center">{{copinoData.goods_and_ctr_wt_kg}}</td>
+                    <td align="center">{{copinoData.seal_no}}</td>
+                    <td align="center"></td>
+                    <td align="center"></td>
+                    <td align="center"></td>
+                    <td align="center"></td>
+                    <td align="center"></td>
+                    <td align="center"></td>
+               
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ 
+<!-- </div> -->

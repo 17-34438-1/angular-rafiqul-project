@@ -1,0 +1,74 @@
+
+    <div class="container">
+        <div class="row">
+            <table class=" table-hover" align="center">
+                <tr>
+                    <td>
+                        <img align="center" src="../../assets/images/cpanew.jpg" class="rounded mx-auto mt-2 d-block" 
+                            width="250px" height="80px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4 align="center"><b>Rotation Wise Export Container Report</b></h4>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container-fluid">
+    <div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+        <table class="table table-responsive-sm  table-bordered">
+            <thead>
+                <tr align="center">
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>SlNo.</b></td>
+                    <td style="border-width:1px;border-style: double;width:6%;" rowspan="2"><b>Rotation</b></td>
+                    <td style="border-width:1px;border-style: double;width:11%;" rowspan="2"><b>Vessel Name.</b></td>
+                    <td style="border-width:1px;border-style: double;width:6%;" rowspan="2"><b>Phase.</b></td>
+                    <td style="border-width:1px;border-style: double;width:8%;" rowspan="2"><b>ATA.</b></td>
+                    <td style="border-width:1px;border-style: double;width:8%;" rowspan="2"><b>ATD.</b></td>
+                    <td style="border-width:1px;border-style: double;width:8%;" rowspan="2"><b>Berth Operator.</b></td>
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>Total Unit.</b></td>
+                    <td style="border-width:1px;border-style: double;" colspan="2"><b>MLO Wise Loaded</b></td>
+                    <td style="border-width:1px;border-style: double;" colspan="2"><b>Import Container</b></td>
+                </tr>
+                <tr align="center">
+                    <td style="border-width:1px;border-style: double;width:1%;"><b>Details</b></td>
+                    <td style="border-width:1px;border-style: double;width:5%;"><b>Summary</b></td>
+                    <th style="border-width:1px;border-style: double;width:20%;"><span class="nowrap"> <b>Balance/Discharge List</b> </span> </th>
+                    <td style="border-width:1px;border-style: double;width:8%;"><b>Summary</b></td>
+                </tr>
+           
+            </thead>
+
+            <tbody *ngFor="let exportCommentByShippingData of exportCommentByShipping;let i=index;">
+                <tr>
+
+                    <td align="center">
+                        <font size="2">{{i+1}}</font>
+                    </td>
+                   
+                    <td align="center">{{exportCommentByShippingData.vsl_visit_dtls_ib_vyg}}</td>
+                    <td align="center">{{exportCommentByShippingData.v_name}}</td>
+                    <td align="center">{{exportCommentByShippingData.phase}}</td>
+                    <td align="center">{{exportCommentByShippingData.ata}}</td>
+                    <td align="center">{{exportCommentByShippingData.atd}}</td>
+                    <td align="center">{{exportCommentByShippingData.bop}}</td>
+                    <td align="center">{{exportCommentByShippingData.exp_cont}}</td>
+                    <td align="center">
+                    </td>
+                    <td align="center">
+                    </td>
+                    <td align="center">
+                    </td>
+                    <td align="center">
+                      
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

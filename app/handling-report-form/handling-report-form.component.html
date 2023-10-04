@@ -1,0 +1,114 @@
+
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <app-sidebar></app-sidebar>
+
+    <div class="content-wrapper">
+
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+
+                    </div>
+                    <div class="col-sm-6">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-9 offset-md-1">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <p class="h4 mb-4" align="center">Handling Reports</p>
+
+                                <div class="row">
+                                    <div class="col-md-6 offset-md-3">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+
+                                                <button type="button" class="btn btn-primary">From Date:</button>
+                                            </div>
+                                            <input type="date" [(ngModel)]="workDateContainer" name="workDateContainer"
+                                                class="form-control">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-6 offset-md-3">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+
+                                                <button type="button" class="btn btn-primary">Rotation No:</button>
+                                            </div>
+                                            <input type="text" [(ngModel)]="rotation_no" name="rotation_no"
+                                                id="rotation_no" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="container mt-3">
+                                    <div class="row">
+                                        <div class="col-4 text-center">
+                                            <label class="radio-inline">
+                                                <input type="radio" [(ngModel)]="options" id="options" name="options"
+                                                value="xl">
+                                                 Excel 
+                                           </label>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                             <label class="radio-inline">
+                                                <input type="radio" [(ngModel)]="options" id="options" name="options"
+                                                value="pdf">
+                                               PDF
+                                            </label>
+                                        </div>
+
+                                        <div class="col-4 text-center">
+                                            <label class="radio-inline">
+                                                  <input type="radio" [(ngModel)]="options" id="options" name="options"
+                                            value="html">                                             
+                                                Html
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                     
+
+                    
+
+
+
+                                <div class="row">
+                                    <div class="col-md-8 offset-md-2 text-center">
+
+                                        <a type="submit" (click)="onSubmit()" class="btn btn-sm btn-info">Show</a>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <app-footer></app-footer>
+</div>
+

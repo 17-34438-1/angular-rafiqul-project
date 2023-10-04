@@ -1,0 +1,64 @@
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <app-sidebar></app-sidebar>
+
+    <div class="content-wrapper">
+    
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                   
+                    </div>
+                    <div class="col-sm-6">
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-9 offset-md-1">
+                        <div class="card">
+                            
+                            <div class="card-body">
+                                <p class="h4 mb-4" align="center">DATE WISE BILL OF ENTRY REPORT</p>                     
+                                 
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="input-group mb-md col-lg-11 mt-3 ">
+                                                <div class="input-group-prepend">
+                                                    <button type="button" class="btn btn-primary">From Date</button>
+                                                </div>
+                                              
+                                                <input type="date"  [(ngModel)]="fromDate" id="fromDate" name="fromDate"
+                                                class="form-control">
+                                            </div>          
+                                        </div>
+                                    </div>
+                            
+
+                                    <div class="row">
+                                        <div class="col-md-8 offset-md-2 text-center mt-3">
+                                            <button (click)="onSubmit()"  class="btn btn-primary">Show</button>
+                                        </div>
+                                    </div>
+                                                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+        
+    </div>
+
+  
+   
+
+
+
+    <app-footer></app-footer>
+</div>

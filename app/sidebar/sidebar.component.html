@@ -1,0 +1,467 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">  
+  
+    <a class="brand-link" [routerLinkActive]="['active']" type="submit" [routerLink]="['/dashboard']">
+        <img src="assets/img/user_frame.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+        <span class="brand-text font-weight-light">{{userRoleName}} Panel</span>
+    </a>
+
+
+    <a class="brand-link" [routerLinkActive]="['active']" type="submit" [routerLink]="['/dashboard']">
+        <img src="assets/img/user_frame.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+        <span class="brand-text font-weight-light">{{userRoleName}} Panel</span>
+    </a>
+
+    <div class="sidebar">
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item menu-open">
+                    <a class="nav-link" [routerLinkActive]="['active']" type="submit" [routerLink]="['/dashboard']">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview" *ngFor="let liveURL of liveURLs">
+                    <a class="nav-link">
+                        <i class="nav-icon fas fa-table"></i>
+                        <p>
+                            {{liveURL.module}}
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" *ngFor="let link of liveURL.links">
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLinkActive]="['active']" type="submit"
+                                routerLink="{{link.linkRoutes}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{link.linkNames}}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <div class="nav-item">
+                <a href="#dgInfo" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                        <span>DG INFORMATION</span>
+                </a>
+            
+                <div id="dgInfo" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/dg/dg-containers-discharge-summary-list-form']">
+                                                       <span>DG Containers Discharge Summary List</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/dg/dg-containers-discharge-list-by-rotation-form']">
+                                                      <span>DG Containers Discharge List by Rotation</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/DgReport/dg-container-delivery-report-form']">
+                                                      <span>DG Container Delivery Report Form</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/DgReport/dg-manifest-form']">
+                                                      <span>DG Manifest</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/DgReport/dg-container-report-form']">
+                                                      <span>DG Container By Rotation Form</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+      
+
+
+
+            <div class="nav-item">
+                <a href="#IsoCodeList" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+                    <span>ISO CODE LIST</span>
+                </a>
+                <!-- Sub -->  
+                <div id="IsoCodeList" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/iso/list']">
+                           <span>iso code list</span>
+                        </a>
+                    </div>
+                </div>
+           </div>
+
+ 
+            <div class="nav-item">
+                <a href="#export_report" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+                    <span>Exports Reports</span>
+                </a>
+                <!-- Sub -->  
+                <div id="export_report" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/pod/list']">
+                            <span>pod list</span>
+                        </a>
+                    </div>                  
+                        <div>
+                            <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/mlo-wise-excel-uploaded-report-form']">
+                             
+                                <span>Mlo Wise Excel Upload</span>
+                            </a>
+                        </div>                  
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/iso/list']">
+                            <span>iso code list</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/copino/form']">
+                         
+                            <span>CopinoCode</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/container-block-report/form']">
+                         
+                            <span>Export Container Block Report</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/mlo-wise-pre-advised-loaded-container-list-form']">
+                         
+                            <span>Export Mlo Wise Pre Advised loaded container list Form</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/mlo-wise-excel-uploaded-report/form']">
+                         
+                            <span>Export Mlo Wise Excel Uploaded Report Form</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/mlo-wise-export-summary/form']">
+                         
+                            <span>Export Mlo Wise Export Summary Form</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/date-and-rotation-wise-pre-advised-container/form']">
+                         
+                            <span>ExportReports Date And Rotation Wise Pre Advised Container Form</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/comments-by-shipping-section-on-export-vessel/form']">
+                         
+                            <span>Export Comments By shipping Section on export Vessel Form</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-excel-upload-sample-with-loaded-container/form']">
+                         
+                            <span>Export Excel Upload Sample With Loaded Container </span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-destination-wise-mlo-loaded-container/form']">
+                         
+                            <span>Export Destination Wise Mlo Loaded Container Form </span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-loaded-container-list-load-and-empty/form']">
+                         
+                            <span>Export Loaded Container List Load And Empty Form </span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-rotation-wise-export-container/form']">
+                         
+                            <span>Rotation Wise Export Container Form </span>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-rotation-wise-container-information/form']">
+                          <span>Export Rotation Wise Container Information Form</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-mlo-wise-loaded-container/form']">
+                          <span>Export Mlo Wise Loaded Container Form</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-container-to-be-loaded/form']">
+                          <span>Export Container To Be Loaded List Form</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-container-loading-excel-report/form']">
+                          <span>Export Container  Loading Excel Report Form</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-loaded-container/form']">
+                          <span>Export Loaded Container Form</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-vessel-list-with-status/form']">
+                          <span>Export Vessel List With Status Form</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-equipment-handling-performance-rtg/form']">
+                          <span>Export Equipment Handling Performance RTG Form</span>
+                        </a>
+                    </div>
+
+                <div>
+                    <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-blank-bay-view/form']">
+                    <span>Export Blank Bay View Form</span>
+                    </a>
+                </div>
+
+
+                <div>
+                    <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/export-container-not-found/form']">
+                    <span>Export Container Not Found Form</span>
+                    </a>
+                </div>
+
+                 
+                </div>
+            </div>
+            
+
+            <div class="nav-item">
+                <a href="#yardList" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+                 
+                    <span>Yard LIST</span>
+                </a>
+                <!-- Sub -->  
+                <div id="yardList" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/yard/list']">
+                            <span>yard list</span>
+                        </a>
+                    </div>
+                 
+                </div>
+               
+            </div>
+
+         
+            <div class="nav-item">
+                <a href="#handling" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+                 
+                    <span>Handling Report</span>
+                </a>
+                <!-- Sub -->  
+                <div id="handling" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/handlingReport/handling-report-form']">
+                            <span>Handling Report</span>
+                        </a>
+                    </div>
+                </div>
+               
+            </div>
+         
+            <div class="nav-item">
+                <a href="#handling" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+                 
+                    <span>Shahin Special Report</span>
+                </a>
+                <!-- Sub -->  
+                <div id="handling" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/shahinSpecialReport/equipment-handling-performance-history-form']">
+                            <span>Equipment Handling Performance History Form</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="handling" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/shahinSpecialReport/loaded-container-form']">
+                            <span>Loaded Container Form</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="handling" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/shahinSpecialReport/location-certify']">
+                            <span>Shahin Location Certify</span>
+                        </a>
+                    </div>
+                </div>
+               
+
+
+
+
+                <div id="handling" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/shahinSpecialReport/shahin-mlo-wise-loading-export-report-form']">
+                            <span>Shahin Mlo Wise Final Loading Export Report Form</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+         
+        
+
+
+
+            <div class="nav-item">
+                <a href="#copino" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+                                    <span>CopinoCode</span>
+                </a>
+                <!-- Sub -->  
+                <div id="copino" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/copino/report']">
+                                                     <span>CopinoCode</span>
+                        </a>
+                    </div>
+                 
+                </div>
+               
+            </div>
+            <div class="nav-item">
+                <a href="#mlo_wise_excel_upload" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+                                    <span>Mlo Wise Excel Upload</span>
+                </a>
+
+                <!-- Sub -->  
+                
+                <div id="mlo_wise_excel_upload" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReports/mlo-wise-excel-uploaded-report-form']">
+                                                     <span>Mlo Wise Excel Upload</span>
+                        </a>
+                    </div>
+                 
+                </div>
+               
+            </div>
+
+
+
+            <div class="nav-item">
+                <a href="#copino" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle">
+                                    <span>IGM Opetation</span>
+                </a>
+                <!-- Sub -->  
+                <div id="copino" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/IgmOperation/todaysEdiDeclaration']">
+                                                        <span>Today's Edi Declaration</span>
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <div id="copino" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/IgmOperation/updateManifest']">
+                                                        <span>Convert Igm</span>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div id="copino" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/ImportReport/berthOperatorReportForm']">
+                            <span>Bearth Opertator </span>
+                        </a>
+                    </div>
+                    
+                </div>
+
+
+                <div id="copino" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/Pangaon/UploadExcelForPangaon/form']">
+                            <span>Pangon Excel Upload </span>
+                        </a>
+                    </div>
+                    
+                </div>
+
+
+                <div id="copino" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/IgmAmendment/ChangeContainerStatus/form']">
+                            <span>ChangeContainerStatus </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="copino" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/UploadExcel/UploadExcelForOBPS/form']">
+                            <span>Upload Excel </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="copino" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/headDelivery/date_wise_bill_entry']">
+                            <span>Bill of Entry Report</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div id="copino" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/headDelivery/date_wise_bill_of_entry_report_form']">
+                            <span>Date Wise Bill of Entry Report</span>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div id="copino" class="collapse" [routerLinkActive]="['show']">
+                    <div>
+                        <a class="nav-link sub" [routerLinkActive]="['active']" type="submit" [routerLink]="['/exportReport/export-assignment-sheet-for-outwad-pangon']">
+                            <span>ASSIGNMENT SHEET FOR OUTWARD PANGAON</span>
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </nav>
+    </div>
+</aside>

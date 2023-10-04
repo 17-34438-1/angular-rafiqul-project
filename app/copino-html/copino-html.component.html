@@ -1,0 +1,65 @@
+<div class="row" >
+    <div style="margin-left: 550px;margin-top: 30px;">
+
+        <img width="250px" height="80px" src="../../assets/img/cpanew.jpg" class="cpa-logo">
+
+
+    </div>
+
+    <h3 style="margin-left:600px;">Export</h3>
+    <div class="row">
+        <div style="margin-left:80px;">
+            Vessel Name:{{vname}}
+        </div>
+        <div class="col" style="margin-left:700px;">
+
+            Rotation No:{{ rotation_no}}
+        </div>
+    </div>
+
+    <div  style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+        <table  class="table table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive">
+            <thead>
+                <tr>
+                    <th>S No.</th>
+                    <th>ContainerNo</th>
+                    <th>Size</th>
+                    <th>Height</th>
+                    <th>ISO Code</th>
+                    <th>MLO Code</th>
+                    <th>Status</th>
+                    <th>Weitht</th>
+                    <th>SealNo</th>
+                    <th>ComingFrom</th>
+                    <th>POD</th>
+                    <th>PermissionNo.</th>
+                    <th>Commodity</th>
+                    <th>POL</th>
+                    <th>Remarks</th>
+    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let copinoData of copinoInfo;let i=index;">
+                    <td>{{i+1}}</td>
+                    <td>{{copinoData.cont_id}}</td>
+                    <td>{{copinoData.cont_size}}</td>
+                    <td>{{copinoData.cont_height}}</td>
+                    <td>{{copinoData.isoType}}</td>
+                    <td>{{copinoData.cont_mlo}}</td>
+                    <td>{{copinoData.cont_status}}</td>
+                    <td>{{copinoData.goods_and_ctr_wt_kg}}</td>
+                    <td>{{copinoData.seal_no}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+               
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ 
+</div>

@@ -1,0 +1,74 @@
+
+
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <app-sidebar></app-sidebar>
+
+    <div class="content-wrapper">
+   
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+         
+                    </div>
+                    <div class="col-sm-6">
+                  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                  
+                    <div class="col-md-9 offset-md-1">
+                        <div class="card">
+                          
+                            <div class="card-body">
+                                <p class="h4 mb-4" align="center">Export Copino</p>                     
+                            
+                              
+                                    <div class="row">
+                                        <div class="col-md-6 offset-md-3">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                  
+                                                    <button type="button" class="btn btn-primary">Rotation No:</button>
+                                                </div>
+                                                <input type="text" [(ngModel)]="rotation_no" id="rotation_no" class="form-control" placeholder="">
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col" style="margin-left: 300px ; padding-top: 15px;padding-bottom: 10px;">
+                                         
+                                            <input type="radio" [(ngModel)]="options" id="options" name="options"  value="xl">
+                                          Excel
+                                      
+                                        </div>
+                                        <div class="col"  style="margin-right: 250px ; padding-top: 15px; padding-bottom: 10px;"> 
+                                            <input type="radio"   [(ngModel)]="options" id="options" name="options" value="html">
+                                            HTML
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8 offset-md-2 text-center">
+                                            <!-- <a type="button" (click)="onSubmit()" class="btn btn-sm btn-info" target="_blank"  [routerLink]="['/dg/dg-cont-discharge-summary-list']">Show</a> -->
+                                            <!-- [routerLink]="['/dg/dg-rotation-list-for-html']" -->
+                                            <a type="submit" (click)="onSubmit()" class="btn btn-sm btn-info" target="_blank" >Show</a>                                    
+                                        </div>
+                                    </div>
+                                                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- Labor Category Form Ends -->
+    <app-footer></app-footer>
+</div>
+<!-- ./wrapper -->

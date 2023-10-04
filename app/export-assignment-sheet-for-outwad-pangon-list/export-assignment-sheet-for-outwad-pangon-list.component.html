@@ -1,0 +1,117 @@
+
+
+
+
+<div class="container">
+    <div class="row">
+        <table class=" table-hover" align="center">
+            <tr>
+                <td>
+                    <img align="center" src="../../assets/img/cpanew.jpg" class="rounded mx-auto mt-2 d-block" 
+                        width="250px" height="80px">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4 align="center"><b>Vessel List With Comments by Shipping Section</b></h4>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+    <table class="table  table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive">
+        <thead>
+            <tr>
+                <th>Sl</th>
+                <th>Container No</th>
+                <th>Size</th>
+                <th>Seal No</th>
+                <th>Goods Description</th>
+                <th>Remarks</th>
+                <th>Release Date,etc</th>
+                <th>G. WT</th>
+                <th>Imp Vessels Name/Depo</th>
+                <th>Rot. No.</th>		
+                <th>L/D</th>		
+                <th>MLO</th>		
+                <th>Desp Date</th>		
+                <th>Carried Vessel</th>		
+                <th>Berthing Date</th>		
+                <th>Location</th>		
+            </tr>
+        </thead>
+
+
+        <!-- "gkey": 46880199,
+        "id": "MEDU5870449",
+        "seal_nbr1": "FX19910157",
+        "goods_and_ctr_wt_kg": 5,
+        "mlo": "MED",
+        "name": "YM HEIGHTS",
+        "nominal_length": "NOM20",
+        "length": null -->
+
+
+        <tbody *ngFor="let exportCommentByShippingData of AssignmentSheetForOutwadPangon;let i=index;">
+            <tr>
+
+                <td align="center">
+                    <font size="2">{{i+1}}</font>
+                </td>
+
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.id}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.length}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.seal_nbr1}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.agent}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.berthop}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.phase_str}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.goods_and_ctr_wt_kg}}</font>
+                </td>
+                <td align="center">
+                    <font size="2"></font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.ata}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.atd}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.mlo}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.comments_time}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.pre_comments}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.comments_by}}</font>
+                </td>
+                <td align="center">
+                    <font size="2">{{exportCommentByShippingData.pre_comments_time}}</font>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+

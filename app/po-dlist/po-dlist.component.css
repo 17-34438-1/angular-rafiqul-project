@@ -1,0 +1,25 @@
+div.col-9 {
+    max-width: 70%;
+}
+
+h3 {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+}
+
+table{
+    
+    margin-top: 10px;
+    color:black;
+    
+    text-align: center;
+    font-size: 12px;
+}
+
+input.form-control.me-2{
+    font-size: inherit;
+    text-align: center;
+}
+
+.hide { display: none; }

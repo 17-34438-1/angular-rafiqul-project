@@ -1,0 +1,84 @@
+
+    <div class="container">
+        <div class="row">
+            <table class=" table-hover" align="center">
+                <tr>
+                    <td>
+                        <img align="center" src="../../assets/img/cpanew.jpg" class="rounded mx-auto mt-2 d-block" width="250px" height="80px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4 align="center"><b>Rotation Wise Container Information</b></h4>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container-fluid">
+    <div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+        <table width="100%" border ='1' cellpadding='0' cellspacing='0'>
+            <thead>
+                <tr align="center">
+ 
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>SlNo.</b></td>
+                    <td style="border-width:1px;border-style: double;width:6%;" rowspan="2"><b>Code</b></td>
+                    <td style="border-width:1px;border-style: double;width:7%;" rowspan="2"><b>Weight</b></td>
+                    <td style="border-width:1px;border-style: double;width:6%;" rowspan="2"><b>Height</b></td>
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>Imo</b></td>
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>IsoType</b></td>
+                    <td style="border-width:1px;border-style: double;width:8%;" rowspan="2"><b>ContNum</b></td>
+
+                    <td style="border-width:1px;border-style: double;width:8%;" rowspan="2"><b>SealN</b></td>
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>Size</b></td>
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>Status</b></td>
+
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>Type</b></td>
+                    <td style="border-width:1px;border-style: double;width:8%;" rowspan="2"><b>Contweight</b></td>
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>Mlocode</b></td>
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>Offdock</b></td>
+                    <td style="border-width:1px;border-style: double;width:9%;" rowspan="2"><b>OrgName</b></td>
+                    <td style="border-width:1px;border-style: double;width:5%;" rowspan="2"><b>PortSId</b></td>
+                    <td style="border-width:1px;border-style: double;width:10%;" rowspan="2"><b>VesselName</b></td>
+                   
+                </tr>
+                
+           
+            </thead>
+
+            <tbody *ngFor="let rotationWiseExportContainer of RotationWiseExportContainer;let i=index;">
+                <tr>
+
+                    <td align="center">
+                        <font size="2">{{i+1}}</font>
+                    </td>
+             
+                    <td align="center">{{rotationWiseExportContainer.commudity_code}}</td>
+                    <td align="center">{{rotationWiseExportContainer.cont_gross_weight}}</td>
+                    <td align="center">{{rotationWiseExportContainer.cont_height}}</td>
+                    <td align="center">{{rotationWiseExportContainer.cont_imo}}</td>
+                    <td align="center">{{rotationWiseExportContainer.cont_iso_type}}</td>
+                    <td align="center">{{rotationWiseExportContainer.cont_number}}</td>
+
+                    <td align="center">{{rotationWiseExportContainer.cont_seal_number}}</td>
+                    <td align="center">{{rotationWiseExportContainer.cont_size}}</td>
+                    <td align="center">{{rotationWiseExportContainer.cont_status}}</td>
+
+                    <td align="center">{{rotationWiseExportContainer.cont_type}}</td>
+                    <td align="center">{{rotationWiseExportContainer.cont_weight}}</td>
+                    <td align="center">{{rotationWiseExportContainer.mlocode}}</td>
+                    <td align="center">{{rotationWiseExportContainer.off_dock_id}}</td>
+
+                    
+                    <td align="center">{{rotationWiseExportContainer.organization_Name}}</td>
+                    <td align="center">{{rotationWiseExportContainer.port_Ship_ID}}</td>
+                    <td align="center">{{rotationWiseExportContainer.vessel_Name}}</td>
+                    
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

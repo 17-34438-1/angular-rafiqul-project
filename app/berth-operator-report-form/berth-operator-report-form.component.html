@@ -1,0 +1,60 @@
+
+
+
+<div class="row">
+    <div class="col-3">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-9">
+        <h3>BERTH OPERATOR REPORT</h3>
+        <!-- <form [formGroup]="berthOperatorReportForm" (ngSubmit)="onSubmit()"> -->
+            <div class="form-group row justify-content-center">
+                <label class="col-sm-2 col-form-label" for="imp_rot">
+                    Rotation
+                </label>
+                <div class="col-sm-3">
+                    <input type="text" [(ngModel)]="imp_rot" name="imp_rot" class="form-control" (blur)="mloCodeByRotation()">
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center" style="margin-top: 20px;">
+                <label class="col-sm-2 col-form-label" for="mlo">
+                    MLO
+                </label>
+                <div class="col-sm-3">
+                    <select [(ngModel)]="mlo_code" class="form-control" >
+                        <option disabled selected value="">Select MLO Operator</option>
+                        <option *ngFor="let mcl of mloCodeList" value={{mcl}}>
+                            {{mcl}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row justify-content-center" style="margin-top: 20px;">
+                <label class="col-sm-2 " for="status">
+                    Status
+                </label>
+                <div class="col-sm-3">
+                    <input type="radio" name="status" [(ngModel)]="status" value="both" />&nbsp;Both&nbsp;&nbsp;                    
+                    <input type="radio" name="status" [(ngModel)]="status" value="fcl" />&nbsp;FCL&nbsp;&nbsp;                    
+                    <input type="radio" name="status" [(ngModel)]="status" value="lcl" />&nbsp;LCL&nbsp;&nbsp;                                        
+                </div>
+            </div>
+              
+            <div class="row justify-content-center" style="margin-top: 20px;">
+                <label class="col-sm-2 " for="type">
+                    Format
+                </label>
+                <div class="col-sm-3">
+                    <input type="radio" name="type" [(ngModel)]="format" value="excel">&nbsp;Excel&nbsp;&nbsp;
+                    <input type="radio" name="type" [(ngModel)]="format" value="html">&nbsp;HTML&nbsp;&nbsp;
+                </div>
+            </div>
+                        
+            <div class="form-group" align="center" style="margin-top: 20px;">
+                <button class="btn btn-primary" (click)="onSubmit()">Search</button>
+            </div>
+        <!-- </form> -->
+    </div>
+</div>

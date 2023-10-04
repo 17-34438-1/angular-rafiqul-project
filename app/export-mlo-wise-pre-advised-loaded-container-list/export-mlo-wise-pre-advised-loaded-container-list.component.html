@@ -1,0 +1,93 @@
+<div class="row">
+
+    <div class="col-12">
+
+        <div style="margin-left: 550px;margin-top: 30px;">
+            <img width="250px" height="80px" src="../../assets/img/cpanew.jpg" class="cpa-logo">
+        </div>     
+
+        <div>
+
+            <h3 style="margin-left:450px;">Rotation Wise Export Container Report</h3>
+            <div class="row">
+              
+                <div class="col" style="margin-left:600px;">
+
+                    Rotation No:{{ rotation_no}}
+                </div>
+            </div>
+          
+            <div class="row" style="margin-left:5px;margin-right: 5px;">
+                <div class="col-md-12" >                 
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr align="center">
+                                <th rowspan="2" align="center">SlNo</th>
+                                <th rowspan="2" align="center">AGENT</th>
+                                <th rowspan="2" align="center">MLO</th>
+                                <th colspan='2' align="center">LOAD</th>
+                                <th colspan='2' align="center">EMPTY</th>
+                                <th colspan='2' align="center">REFFER</th>
+                                <th colspan='2' align="center">IMDG</th>
+                                <th colspan='2' align="center">TRANS</th>
+                                <th colspan='2' align="center">ICD</th>
+                                <th colspan='2' align="center">45</th>
+                                <th rowspan='2' align="center">TOTAL</th>
+                                <th colspan='2' align="center" style="border-width:1px;border-style: double;width:15%;">MLO REPORT</th>
+                            </tr>
+                            <tr>
+                                <td align="center">20</td>
+                                <td align="center">40</td>
+                                <td align="center">20</td>
+                                <td align="center">40</td>
+                                <td align="center">20</td>
+                                <td align="center">40</td>
+                                <td align="center">20</td>
+                                <td align="center">40</td>
+                                <td align="center">20</td>
+                                <td align="center">40</td>
+                                <td align="center">20</td>
+                                <td align="center">40</td>                              
+                                <td align="center">LD</td>
+                                <td align="center">MT</td>
+                                 <td align="center">DETAIS</td>
+                                <td align="center">SUMMARY</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let MloWisePreAdvisedLoadedContainerInfo of MloWisePreAdvisedLoadedContainer; let i=index; ">
+                                <td>{{i+1}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.agent}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.mlo}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.loaded_20}}  </td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.loaded_40}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.emty_20}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.emty_40}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.reefer_20}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.reefer_40}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.imdg_20}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.imdg_40}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.trshp_20}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.trshp_40}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.icd_20}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.icd_40}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.ld_20}}</td>
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.ld_20}}</td>                          
+                                <td>{{MloWisePreAdvisedLoadedContainerInfo.grand_tot}}</td>                                
+                                <td>
+                                    <a type="button" (click)="onSubmit(MloWisePreAdvisedLoadedContainerInfo.mlo)" [routerLink]="['/exportReports/mlo-wise-pre-advised-view-list']" >View</a> 
+                                </td>
+                                <td align="center">
+                                    <a type="" (click)="OnSubmit_SummaryList(MloWisePreAdvisedLoadedContainerInfo.mlo)"  [routerLink]="['/exportReports/mlo-wise-summary-list']"><font color="#990000"></font>View</a> 
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+     
+    </div>
+</div>

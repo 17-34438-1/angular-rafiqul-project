@@ -1,0 +1,188 @@
+
+    <table width="70%" border='0' cellpadding='0' cellspacing='0' align="center">
+        <tr bgcolor="#ffffff" align="center" height="100px">
+            <td colspan="13" align="center">
+                <table border=0 width="100%">
+                    <tr align="center">
+                        <td colspan="13"><img width="250px" height="80px" src="../../assets/img/cpanew.jpg"
+                                class="cpa-logo"></td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="13">
+                            <font size="4"><b><u>MLO WISE LOADED CONTAINER LIST FOR {{rotation_no}}</u></b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><b>Vessel:</b></td>
+                        <td align="left">
+                            <font size="3"><b>{{vsl_Name}}</b></font>
+                        </td>
+                        <td align="right">
+                            <font size="3"><b>Berth:</b></font>
+                        </td>
+                        <td align="left">
+                            <font size="3"><b>{{ berth}}</b></font>
+                        </td>
+                        <td align="right">
+                            <font size="3"><b>EXP ROT.:</b></font>
+                        </td>
+                        <td align="left">
+                            <font size="3"><b>{{rotation_no}}</b></font>
+                        </td>
+                        <td colspan="3" align="right">
+                            <font size="4"><b>Berth Operator:</b></font>
+                        </td>
+                        <td colspan="3" align="left">
+                            <font size="4"><b>{{berth_op}}</b></font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+
+    </table>
+
+
+
+    <div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+        <table  class="table table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive">
+            <thead>
+                <tr>
+                    <td><b>SlNo.</b></td>
+                    <td style="width: 100px;"><b>Container No.</b></td>
+                    <td><b>ISO Type</b></td>
+                    <td><b>Size</b></td>
+                    <td><b>Height</b></td>
+                    <td><b>MLO</b></td>
+                    <td><b>Status</b></td>
+                    <td><b>Weight</b></td>
+                    <td><b>POD</b></td>
+                    <td><b>Stowage</b></td>
+                    <td><b>Loaded Time</b></td>
+                    <td style="width: 100px;"><b>Seal No</b></td>
+                    <td><b>Coming From</b></td>
+                    <td><b>Truck No</b></td>
+                    <td><b>Craine Id</b></td>
+                    <td style="width: 100px;"><b>Commodity</b></td>
+
+                    <td><b>User Id</b></td>
+
+                </tr>
+
+
+
+            </thead>
+            <tbody *ngFor="let containerListData of containerList;let i=index;">
+
+
+
+                <tr>
+                    <td align="center">
+                        <font size="2">{{i+1}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.id}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.iso}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.size}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.height}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.mlo}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.freight_kind}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.weight}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.pod}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.stowage_pos}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.last_update}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.seal_no}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.coming_from}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.truck_no}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.craine_id}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.short_name}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{containerListData.user_id}}</font>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <table width="100%" border='1' cellpadding='0' cellspacing='0'>
+            <tr>
+                <td colspan="6" align="center">TOTAL ONBOARD</td>
+                <td colspan="6" align="center">BALANCE TO LOAD</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">LADEN</td>
+                <td colspan="2" align="center">EMPTY</td>
+                <td colspan="2" align="center">TUES</td>
+                <td colspan="2" align="center">LADEN</td>
+                <td colspan="2" align="center">EMPTY</td>
+                <td colspan="2" align="center">TUES</td>
+
+            </tr>
+            <tr>
+                <td align="center">20</td>
+                <td align="center">40</td>
+                <td align="center">20</td>
+                <td align="center">40</td>
+                <td align="center">LD</td>
+                <td align="center">MT</td>
+                <td align="center">20</td>
+                <td align="center">40</td>
+                <td align="center">20</td>
+                <td align="center">40</td>
+                <td align="center">LD</td>
+                <td align="center">MT</td>
+            </tr>
+            <tr *ngFor="let containerListData of containerOnboardInfo;let i=index;">
+                <td align="center">{{containerListData.onboard_LD_20}}</td>
+                <td align="center">{{containerListData.onboard_LD_40}}</td>
+                <td align="center">{{containerListData.onboard_MT_20}}</td>
+                <td align="center">{{containerListData.onboard_MT_40}}</td>
+                <td align="center">{{containerListData.onboard_LD_tues}}</td>
+                <td align="center">{{containerListData.onboard_MT_tues}}</td>
+          
+          
+
+                <td align="center">{{balance_LD_20 }}</td>
+                <td align="center">{{balance_LD_40}}</td>
+                <td align="center">{{balance_MT_20}}</td>
+                <td align="center">{{balance_MT_40}}</td>
+                <td align="center">{{balance_LD_tues}}</td>
+                <td align="center">{{balance_MT_tues}}</td>
+
+
+
+            </tr>
+        </table>
+
+    </div>
+

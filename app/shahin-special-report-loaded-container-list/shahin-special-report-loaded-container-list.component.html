@@ -1,0 +1,175 @@
+<div class="row">
+    <table width="70%" border='0' cellpadding='0' cellspacing='0' align="center">
+        <tr bgcolor="#ffffff" align="center" height="100px">
+            <td colspan="13" align="center">
+                <table border=0 width="100%">
+                    <tr align="center">
+                        <td colspan="13"><img width="250px" height="80px" src="../../assets/img/cpanew.jpg"
+                                class="cpa-logo"></td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="13">
+                            <font size="4"><b><u>Shahin Special Report Loaded Container List</u></b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><b>Vessel:</b></td>
+                        <td align="left">
+                            <font size="3"><b>{{vsl_Name}}</b></font>
+                        </td>
+                        <td align="right">
+                            <font size="3"><b>Voy:</b></font>
+                        </td>
+                        <td align="left">
+                            <font size="3"><b>{{ voy_No}}</b></font>
+                        </td>
+                        <td align="right">
+                            <font size="3"><b>EXP ROT.:</b></font>
+                        </td>
+                        <td align="left">
+                            <font size="3"><b>{{ rotation_no}}</b></font>
+                        </td>
+                        <td colspan="3" align="right">
+                            <font size="4"><b>Arrival Date:</b></font>
+                        </td>
+                        <td colspan="3" align="left"><font size="4"><b>{{ata}}</b></font></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+
+    </table>
+
+
+
+    <div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+        <table class="table table-bordered table-condensed  table-hover table-fixed  table-responsive">
+            <thead>
+                <tr>
+                    <td><b>SlNo.</b></td>
+                    <td style="width: 100px;"><b>Container No.</b></td>
+                    <td><b>ISO Type</b></td>
+                    <td><b>Type</b></td>
+                    <td><b>MLO</b></td>
+                    <td><b>Status</b></td>
+                    <td><b>Weight</b></td>
+                    <td><b>POD</b></td>
+                    <td><b>Stowage</b></td>
+                    <td><b>Loaded Time</b></td>
+                    <td><b>Coming From</b></td>
+                    <td style="width: 100px;"><b>Commodity</b></td>
+                    <td><b>User Id</b></td>
+
+                </tr>
+
+
+
+            </thead>
+            <tbody *ngFor="let excel_uploaded_sample_container of exportLoadedContainerReport;let i=index;">
+
+
+
+                <tr>
+                    <td align="center">
+                        <font size="2">{{i+1}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.id}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.iso}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.type}}</font>
+                    </td>
+                
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.mlo}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.freight_kind}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.weight}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.pod}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.stowage_pos}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.last_update}}</font>
+                    </td>
+                   
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.coming_from}}</font>
+                    </td>
+                  
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.short_name}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{excel_uploaded_sample_container.user_id}}</font>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+
+        <table width="100%" border='1' cellpadding='0' cellspacing='0'>
+            <tr>
+                <td colspan="6" align="center">TOTAL ONBOARD</td>
+                <td colspan="6" align="center">BALANCE TO LOAD</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">LADEN</td>
+                <td colspan="2" align="center">EMPTY</td>
+                <td colspan="2" align="center">TUES</td>
+                <td colspan="2" align="center">LADEN</td>
+                <td colspan="2" align="center">EMPTY</td>
+                <td colspan="2" align="center">TUES</td>
+
+            </tr>
+            <tr>
+                <td align="center">20</td>
+                <td align="center">40</td>
+                <td align="center">20</td>
+                <td align="center">40</td>
+                <td align="center">LD</td>
+                <td align="center">MT</td>
+                <td align="center">20</td>
+                <td align="center">40</td>
+                <td align="center">20</td>
+                <td align="center">40</td>
+                <td align="center">LD</td>
+                <td align="center">MT</td>
+            </tr>
+            <tr *ngFor="let containerListData of containerOnboardInfo;let i=index;">
+                <td align="center">{{containerListData.onboard_LD_20}}</td>
+                <td align="center">{{containerListData.onboard_LD_40}}</td>
+                <td align="center">{{containerListData.onboard_MT_20}}</td>
+                <td align="center">{{containerListData.onboard_MT_40}}</td>
+                <td align="center">{{containerListData.onboard_LD_tues}}</td>
+                <td align="center">{{containerListData.onboard_MT_tues}}</td>
+
+                <td align="center">{{containerListData.balance_LD_20 }}</td>
+                <td align="center">{{containerListData.balance_LD_40}}</td>
+                <td align="center">{{containerListData.balance_MT_20}}</td>
+                <td align="center">{{containerListData.balance_MT_40}}</td>
+                <td align="center">{{containerListData.balance_LD_tues}}</td>
+                <td align="center">{{containerListData.balance_MT_tues}}</td>
+
+
+
+            </tr>
+        </table>
+    </div>
+</div>

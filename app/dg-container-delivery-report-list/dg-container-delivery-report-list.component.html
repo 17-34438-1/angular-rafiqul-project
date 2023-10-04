@@ -1,0 +1,72 @@
+
+    <div style="margin-left: 550px;margin-top: 30px;">
+        <img width="250px" height="80px" src="../../assets/img/cpanew.jpg" class="cpa-logo">
+    </div>
+    <h3 style="margin-left:500px;">DG CONTAINER DELIVERY REPORT</h3>
+
+
+
+    <h3 *ngIf="showRotation" style="margin-left:580px;">Rotation:{{Rotation}}</h3>
+    <h3 *ngIf="show" style="margin-left:500px;">From :{{fromDate}} to {{toDate}}</h3>
+    <div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+        <table class="table table-responsive-sm table-responsive table-bordered table-condensed table-striped table-hover table-fixed table-sm">
+            <thead>
+                <tr>
+                    <th class="text-center" style="border-width:3px;">Sl No.</th>
+                    <th class="text-center" style="border-width:3px;">Vessel Name</th>
+                    <th class="text-center" style="border-width:3px;">Registration No.</th>
+                    <th class="text-center" style="border-width:3px;">Berthing Time</th>
+                    <th class="text-center" style="border-width:3px;">Container No.</th>			
+                    <th class="text-center" style="border-width:3px;">Size</th>	
+                    <th class="text-center" style="border-width:3px;">MLO</th>
+                    <th class="text-center" style="border-width:3px;">Discharge Time</th>
+                    <th class="text-center" style="border-width:3px;">BL No.</th>
+                    <th class="text-center" style="border-width:3px;">Status</th>
+                    <th class="text-center" style="border-width:3px;">IMDG Class No</th>
+                    <th class="text-center" style="border-width:3px;">UN No</th>
+                    <th class="text-center" style="border-width:3px;">Description of Goods</th>
+                    <th class="text-center" style="border-width:3px;">Importer Name & Address</th>
+                    <th class="text-center"  style="border-width:3px;">Navy Comments</th>
+                    <th class="text-center" style="border-width:3px;">Delivery Status</th>
+                    <th class="text-center" style="border-width:3px;">R/L No.</th>			
+                    <th class="text-center" style="border-width:3px;">R/L Date</th>
+                    <th class="text-center" style="border-width:3px;">OBPC No.</th>			
+                    <th class="text-center" style="border-width:3px;">OBPC Date</th>
+                    <th class="text-center" style="border-width:3px;">Delivery Date</th>
+                    <th class="text-center" style="border-width:3px;">Remarks</th>		
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dgContainerReport of resultList;let i=index;">
+                    <td align="center">{{i+1}}</td>
+
+           
+
+
+                    <td align="center">{{dgContainerReport.vessel_Name}}</td>
+                    <td align="center">{{dgContainerReport.import_Rotation_No}}</td>
+                    <td align="center">{{dgContainerReport.ata}}</td>
+                    <td align="center">{{dgContainerReport.cont_number}}</td>
+                    <td align="center">{{dgContainerReport.cont_size}}</td>
+                    <td align="center">{{dgContainerReport.mlo}}</td>
+                    <td align="center">{{dgContainerReport.Discharged_Status_date}}</td>
+                    <td align="center">{{dgContainerReport.bl_No}}</td>                   
+                    <td align="center">{{dgContainerReport.cont_status}}</td>
+                    <td align="center">{{dgContainerReport.cont_imo}}</td>                 
+                    <td align="center">{{dgContainerReport.cont_un}}</td>
+                    <td align="center">{{dgContainerReport.description_of_Goods}}</td>
+
+                    <td align="center">{{dgContainerReport.notify_name}}</td>
+                    <td></td>
+                    <td></td>
+                    <td align="center">{{dgContainerReport.rl_no}}</td>
+                    <td align="center">{{dgContainerReport.rl_date}}</td>
+                    <td align="center">{{dgContainerReport.obpc_number}}</td>
+                    <td align="center">{{dgContainerReport.obpc_date}}</td>
+                    <td align="center">{{dgContainerReport.Delivery_Status_date}}</td>
+                    <td></td>
+                 
+                </tr>
+            </tbody>
+        </table>
+    </div>

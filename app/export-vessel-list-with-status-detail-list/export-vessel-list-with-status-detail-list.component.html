@@ -1,0 +1,155 @@
+<div class="row">
+    <table width="70%" border='0' cellpadding='0' cellspacing='0' align="center">
+        <tr bgcolor="#ffffff" align="center" height="100px">
+            <td colspan="13" align="center">
+                <table border=0 width="100%">
+                    <tr align="center">
+                        <td colspan="13"><img width="250px" height="80px" src="../../assets/img/cpanew.jpg"
+                                class="cpa-logo"></td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="13">
+                            <font size="4"><b><u>Export Upload Report</u></b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><b>Vessel:</b></td>
+                        <td align="left">
+                            <font size="3"><b>{{vsl_Name}}</b></font>
+                        </td>
+                        <td align="right">
+                            <font size="3"><b>Voy:</b></font>
+                        </td>
+                        <td align="left">
+                            <font size="3"><b>{{ voYNo}}</b></font>
+                        </td>
+                        <td align="right">
+                            <font size="3"><b>EXP ROT.:</b></font>
+                        </td>
+                        <td align="left">
+                            <font size="3"><b>{{ rotation_no}}</b></font>
+                        </td>
+                        <td colspan="3" align="right">
+                            <font size="4"><b>Arrival Date:</b></font>
+                        </td>
+                        <td colspan="3" align="left">
+                            <font size="4"><b>{{ata}}</b></font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+
+    </table>
+
+
+
+    <div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td><b>SlNo.</b></td>
+                    <td style="width: 100px;"><b>Container No.</b></td>
+                    <td><b>ISO Type</b></td>
+                    <td><b>Size</b></td>
+                    <td><b>Height</b></td>
+                    <td><b>MLO</b></td>
+                    <td><b>Status</b></td>
+                    <td><b>Weight</b></td>
+                    <td><b>POD</b></td>
+                    <td><b>Stowage</b></td>
+                    <td><b>Loaded Time</b></td>
+                    <td style="width: 100px;"><b>Seal No</b></td>
+                    <td><b>Coming From</b></td>
+                    <td><b>Truck No</b></td>
+                    <td><b>Craine Id</b></td>
+                    <td style="width: 100px;"><b>Commodity</b></td>
+
+                    <td  style="width: 100px;"><b>User Id</b></td>
+
+                </tr>
+
+
+
+            </thead>
+            <tbody *ngFor="let mlo_wise_excel_uploaded of mlo_wise_export;let i=index;">
+
+                <span>{{setOffDock(mlo_wise_excel_uploaded.cont_mlo)}}</span>
+
+                <tr *ngIf="totalShowStatus">
+                    <td class="text-center">
+                        <font size="2"><b>Total Container:</b></font>
+                    </td>
+                    <td class="text-center">
+                        <font size="2"><b>{{total}}</b></font>
+                    </td>
+                </tr>
+
+                <tr *ngIf="orgNameShowStatus">
+                    <td colspan="12">
+                        <font size="3"><b>{{mlo_wise_excel_uploaded.cont_mlo}}</b>
+                        </font>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td align="center">
+                        <font size="2">{{j}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.id}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.iso}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.size}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.height}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.cont_mlo}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.freight_kind}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.weight}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.pod}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.stowage_pos}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.last_update}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.seal_no}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.coming_from}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.truck_no}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.craine_id}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.short_name}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{mlo_wise_excel_uploaded.user_id}}</font>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

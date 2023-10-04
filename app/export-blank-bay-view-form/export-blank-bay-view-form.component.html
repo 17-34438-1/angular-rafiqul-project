@@ -1,0 +1,72 @@
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <app-sidebar></app-sidebar>
+
+    <div class="content-wrapper">
+   
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+         
+                    </div>
+                    <div class="col-sm-6">
+                  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                  
+                    <div class="col-md-9 offset-md-1">
+                        <div class="card">
+                          
+                            <div class="card-body">
+                                <p class="h4 mb-4" align="center">Blank Vessel Layout...</p>                     
+                            
+                              
+                                    <div class="row">
+                                        <div class="col-md-6 offset-md-3">
+                                       
+                                                <div class="input-group mb-md">
+                                                    <button type="button" class="btn btn-primary">Vessel :</button>
+
+                                                    <!-- <select formControlName="work_category_id" class="form-control"
+                                                    (change)="OnBlankBayChange($any($event.target).value)">
+                                                    <option  selected value= {{vvd_gkey}}>Select Job Category</option>
+                                                    <option *ngFor="let dgInfoData of blankBay" value= {{dgInfoData.vvd_gkey}}>
+                                                        {{dgInfoData.vsl}} 
+                                                    </option>
+                                                    </select> -->
+
+                                                    <select name="vvdGkey" (change)="OnBlankBayChange($any($event.target).value)" class="form-control" required>
+                                                        <option selected value= {{vvd_gkey}}>----Select Vessel----</option>                                                  
+                                                            <option *ngFor="let dgInfoData of blankBay" value= {{dgInfoData.vvd_gkey}}>{{dgInfoData.vsl}} </option>
+                                                       
+                                                    </select>
+                                                    
+                                                </div>
+
+
+                                                <!-- target="_blank" href="/exportReports/export-blank-bay-view/list" -->
+                                                                                
+                                        </div>
+                                    </div>                                    
+                                    <div class="row" style="margin-top: 10px;">
+                                        <div class="col-md-8 offset-md-2 text-center">                                        
+                                            <a type="submit" (click)="onSubmit()" class="btn btn-sm btn-info">Show</a>                                    
+                                        </div>
+                                    </div>
+                                                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <app-footer></app-footer>
+</div>

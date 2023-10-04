@@ -1,0 +1,95 @@
+
+<div class="row">
+    
+<table align="center">    
+    <tr><td style="font-size:22px;" ><b>DG MENIFEST</b></td></tr>    
+    <tr><td align ="left"><b>Import Rotation No :{{rotation_no}} </b></td></tr>
+</table> 
+<div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+
+
+<table border="1" class="table table-responsive-sm table-responsive table-bordered table-condensed table-striped table-hover table-fixed table-sm" >
+
+
+    <tr class='gridDark'>
+        <th>Agent</th>
+        <th>MLO&nbsp;Code</th>
+        <td>Line&nbsp;No.</td>
+        <td>B/L&nbsp;Number</td>
+        <td>Number/Quantity</td>
+        <td>Description</td>
+        <td>Marks&nbsp;&&nbsp;Number</td>
+        <td>Description&nbsp;Of&nbsp;Goods</td>
+        <td>Date&nbsp;Of&nbsp;Entry&nbsp;of&nbsp;Goods</td>
+        <td>Net Weight</td>
+        <td>Gross Weight</td>
+        <td>Container&nbsp;Detail</td>
+    <td>Name&nbsp;of&nbsp;the&nbsp;Importers&nbsp;or&nbsp;Clearing&nbsp;Agent</td>    
+    <td>Bill&nbsp;Of&nbsp;Entry&nbsp;Number</td>
+    <td>Bill&nbsp;Of&nbsp;Entry&nbsp;Date</td>
+    <td>Delivered</td>
+    <td>Discharged</td>
+    <td>To&nbsp;be&nbsp;Accounted&nbsp;For</td>
+    <td>Remarks</td>    
+    <td>IMCO</td>
+    <td>UN</td>
+    <td>Navy comments</td>
+</tr>
+<tbody>
+    <tr *ngFor="let dgContainerReport of dgInfo;let i=index;">  
+        <td>{{dgContainerReport.organization_Name}}</td>
+        <td>{{dgContainerReport.mlocode}}</td>
+        <td>{{dgContainerReport.line_No}}</td>
+        <td>{{dgContainerReport.bl_No}}</td>
+        <td>{{dgContainerReport.pack_Number}}</td>
+        <td>{{dgContainerReport.pack_Description}}</td>
+        <td>{{dgContainerReport.pack_Marks_Number}}</td>
+        <td>{{dgContainerReport.description_of_Goods}}</td>                   
+        <td>{{dgContainerReport.date_of_Entry_of_Goods}}</td>
+        <td>{{dgContainerReport.net_weight}}</td>                 
+        <td>{{dgContainerReport.weight}}</td>
+
+        <td align="left" valign="top">					
+            <table >
+            <tr><td>Off-dock Name</td><td>Cnt.&nbsp;Number</td><td>Seal&nbsp;Number</td><td>Size</td><td>Type</td><td>Height</td><td>Weight</td><td>Status</td><td>IMCO</td><td>UN</td></tr>
+                   <tr *ngFor="let dgManifestContainer of dgContainerReport.dgManifestReports;let i=index;">
+                    <td>{{dgManifestContainer.organization_Name}}</td>
+                    <td>{{dgManifestContainer.cont_number}}</td>
+                    <td>{{dgManifestContainer.cont_seal_number}}</td>
+                    <td>{{dgManifestContainer.cont_size}}</td>
+                    <td>{{dgManifestContainer.cont_type}}</td>
+                    <td>{{dgManifestContainer.cont_height}}</td>
+                    <td>{{dgManifestContainer.cont_weight}}</td>
+                    <td>{{dgManifestContainer.cont_status}}</td>
+                    <td>{{dgManifestContainer.cont_imo}}</td>
+                    <td>{{dgManifestContainer.cont_un}}</td>
+                </tr>
+            </table>            
+        </td>
+
+        <td align="left" valign="top">					
+            <table width="100%">
+            <tr><th align="left">Consignee</th></tr>      
+            <tr><td>{{dgContainerReport.consigneeDesc}}</td></tr>            
+            <tr><th align="left">Notify Party</th></tr>        
+            <tr><td valign="top">{{dgContainerReport.notify_name}}</td></tr>
+            </table>
+        </td>
+        <td>{{dgContainerReport.Bill_of_Entry_No}}</td>
+        <td>{{dgContainerReport.Bill_of_Entry_Date}}</td>
+        <td>{{dgContainerReport.No_of_Pack_Delivered}}</td>
+        <td>{{dgContainerReport.No_of_Pack_Discharged}}</td>
+        <td></td>
+        <td>{{dgContainerReport.remarks}}</td>
+        <td>{{dgContainerReport.imco}}</td>
+        <td>{{dgContainerReport.un}}</td>
+
+    </tr>
+</tbody>
+</table> 
+
+</div>
+
+
+
+</div>

@@ -1,0 +1,53 @@
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="card">
+            <div class="card-body login-card-body">    
+                <p class="login-box-msg">
+                    <img src="assets/img/logocpa.png" class="img-circle elevation-2" alt="User Image" 
+                        align="center" height="110px" width="110px">
+                </p>
+                <p class="text-center">
+                    <font size="5" color="#0556d4"><b>Port Community System</b></font>
+                </p>          
+                <!-- <p class="login-box-msg"></p> -->
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="input-group mb-3">
+                        <input type="text" [(ngModel)]="loginId" formControlName="loginId" name="loginId" 
+                            class="form-control" placeholder="User ID">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" [(ngModel)]="password" formControlName="password" name="password" 
+                            class="form-control" placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button [disabled]="this.loginForm.invalid" class="btn btn-primary btn-block">Sign In</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="login-box-msg">
+                    &nbsp;
+                </p>
+                <p class="login-box-msg">
+                    <font size="4" style="display: none;"><b>Powered By:</b></font>
+                    <br><br>
+                    <img src="assets/img/datasoft_logo.png" class="elevation-2" alt="User Image" 
+                        align="center" style="display: none;">
+                    
+                </p> 
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+    </div>
+    <!-- /.login-box -->
+</body>

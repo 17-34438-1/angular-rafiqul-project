@@ -1,0 +1,19 @@
+div.col-9 {
+    max-width: 70%;
+}
+
+
+
+table{
+    
+    margin-top: 10px;
+    color:black;
+    text-align: center;
+    font-size: 12px;
+}
+
+input.form-control.me-2{
+    font-size: inherit;
+    text-align: center;
+}
+

@@ -1,0 +1,141 @@
+select time_load from inv_unit_fcy_visit
+
+
+
+mis_exp_unit
+mis_equip_log_in_out_info
+
+
+mis_exp_unit_preadv_req
+mis_exp_vvd
+yard_block
+cont_yard
+
+DG CONTAINER DISCHARGE LIST
+2017/1628
+2017/452
+
+DG MENIFEST
+2023/2415
+
+DG CONTAINER DELIVERY REPORT
+2023/244
+
+DG CONTAINER DISCHARGE SUMMARY
+2022/1568
+2017/452
+
+DG CONTAINER BY ROTATION 
+2023/2169
+2023/2415
+
+ExportReport MloWise ExportSummary
+2023/2000
+
+
+Export Copino
+
+2022/1568
+
+
+
+dg-containers-discharge-list-by-rotation 2017/1628
+
+ExportCommentsByShippingSectionOnExportVesselService 
+
+ExportContainerLoadingDetailReportService   change PcsOracle
+2023/1742 
+
+Export Container Block Report   2023/1794              pcs live a dawa hoica
+2020/EPZ03
+spring and angular chack kora hoica but live a dawa hoi ni.
+
+
+
+ExportContainerLoadingReportSummaryService
+
+
+DestinationWiseMloLoadedContainer
+2023/1794
+2023/2000
+if we need to expend any column width follow this menu.
+
+
+ExportEquipmentHandlingPerformanceRTGService          2023-09-01   Day
+spring and angular chack kora hoica but live a dawa hoi ni.
+2023-06-15
+
+if we need to expend any column width follow this menu.
+
+
+Export Container Not Found Report
+compleated
+2023/93
+2023/1794
+
+ExportContainerToBeLoadedList 
+compleated
+if we need to responsive_sm follow this menu.
+
+
+ExportLoadedContainerListService  2023/1742   as responsive follow
+compleated
+
+
+ExportLoadedContainerListLoadAndEmpty 2023/1530  2023/2034  2023/2034    as responsive follow
+compleated
+2023/673  2023/4242  2023/1794
+Loaded container List Loaded and Empty
+
+
+RotationWiseExportContainerReport
+need this link
+
+Export
+
+myReportExportContainerLoadingListViewForCPA
+mlo,iso,wight,pod,fright_kind
+
+myAllReportView/2023/113/1/detail
+
+myReportExportSummaryMloWise
+myAllReportView/2023/113/2/summary
+2D 4H 45H 4RH 2RF
+
+
+
+Import
+
+myAllReportView/2023/113/2/detail
+
+myAllReportView/2023/113/1/summary
+
+
+
+
+
+
+ExportMloWiseLoadedContainerService 
+not compleated checking
+
+
+
+
+
+
+ExportMloWisePreAdvisedLoadedContainerListService
+not start
+
+
+ExportDateAndRotationWisePreAdvisedContainerService       pcs live a dawa hoica
+not start
+2023-04-24  2023/1742
+ExportContainerBayViewService
+not start
+
+ExportBlankBayViewService
+not start
+
+
+UploadExportContainerExceFileService
+not start

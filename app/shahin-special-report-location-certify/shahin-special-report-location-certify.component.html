@@ -1,0 +1,202 @@
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <app-sidebar></app-sidebar>
+
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title" style="margin-top: 1px;">Location/Certify</h3>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+
+
+                                <div class="row">
+                                    <div class="col-md-6 offset-md-3">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <button type="button" class="btn btn-primary">Container No</button>
+                                            </div>
+                                            <input type="text" [(ngModel)]="ddl_imp_cont_no" name="ddl_imp_cont_no"
+                                                id="ddl_imp_cont_no" class="form-control" placeholder="Container No">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 offset-md-3">
+                                        <div class="input-group mb-3">
+                                            <span class="">OR </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6 offset-md-3">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <button type="button" class="btn btn-primary">BL No </button>
+                                            </div>
+                                            <input type="text" [(ngModel)]="ddl_imp_bl_no" name="ddl_imp_bl_no"
+                                                id="ddl_imp_bl_no" class="form-control" placeholder="BL No">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group" align="center" style="margin-top: 20px;">
+
+                                    <a type="button" (click)="onSubmit()" class="btn btn-sm btn-info">Show</a>
+                                </div>
+                            </div>
+
+                            <div class="card-body" id="navOpen"  *ngIf="navOpen">
+
+                                <div class="table-responsive">
+                                    <table
+                                        class="table table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive">
+
+                                        <thead>
+                                           
+                                            <tr>
+                                                <th align="center">SL</th>
+                                                <th align="center">Gate Out
+                                                    Date & Time</th>
+                                                <th align="center">Last Move
+                                                    Date & Time</th>
+                                                <th align="center">Container
+                                                </th>
+                                                <th align="center">Yard</th>
+                                                <th align="center">Position
+                                                </th>
+                                                <th align="center">Cont. Type
+                                                </th>
+                                                <th align="center">Status
+                                                </th>
+                                                <th align="center">Discharge
+                                                    Time</th>
+                                                <th align="center">Dest.
+                                                </th>
+                                                <th align="center">
+                                                    Offdock Name</th>
+                                                <th align="center">
+                                                    Rotation</th>
+                                                <th align="center">Vessel
+                                                    Name</th>
+                                                <th align="center">Master
+                                                    BL</th>
+                                                <th align="center">Sub BL
+                                                </th>
+                                                <th align="center">Seal
+                                                </th>
+                                                <th align="center">Size </th>
+
+                                                <th align="center">Height
+                                                </th>
+                                            </tr>
+
+                                        </thead>
+                                        <tbody>
+                                            <tr
+                                                *ngFor="let result  of locataionCertify | filter: searchText;let i = index;let c = count">
+                                              
+                                                <td align="center">{{i+1}}</td>
+                                                <td align="center">{{result.fcy_time_out}}</td>
+                                                <td align="center">{{result.time_move}}</td>
+                                                <td align="center">{{result.ddl_imp_cont_no}}</td>
+                                                <td align="center">{{result.yard }}{{result.block}}</td>
+                                                <td align="center">
+                                                    {{result.fcy_last_pos_slot}}{{result.fcy_position_name}}</td>
+                                                <td align="center">{{result.cont_iso_type}}</td>
+                                                <td align="center">{{result.cont_status}}</td>
+                                                <td align="center">{{result.fcy_time_in}}</td>
+                                                <td align="center">{{result.off_dock_id}}</td>
+                                                <td align="center">{{result.offdock_name}}</td>
+                                                <td align="center">{{result.import_Rotation_No}}</td>
+                                                <td align="center">{{result.vsl_name}}</td>
+                                                <td align="center">{{result.bl_No}}</td>
+                                                <td align="center">{{result.sub_bl}}</td>
+                                                <td align="center">{{result.cont_seal_number}}</td>
+                                                <td align="center">{{result.cont_size}}</td>
+                                                <td align="center">{{result.cont_height}}</td>
+                                            </tr>
+                                        </tbody>
+                                        <tr> </tr>
+                                        <tr>
+                                            <td colspan="16" align="center"> Total Container: {{totcont}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="16" align="left">{{cont}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8" align="right" valign="top">
+                                                <table>
+                                                    <tr class="gridDark">
+                                                        <td colspan="2" align="center">Date Wise Summary</td>
+                                                    <tr class="gridDark">
+                                                        <td style="padding:5px;">Date</td>
+                                                        <td style="padding:5px;">Total Container</td>
+
+                                                    <tr class="gridLight">
+                                                        <td style="padding:5px;">{{time_move}}</td>
+                                                        <td style="padding:5px;" align="right">{{totcont}}</td>
+
+                                                </table>
+                                            </td>
+                                            <td colspan="8" align="left" valign="top">
+                                                <table>
+                                                    <tr class="gridDark">
+                                                        <td colspan="2" align="center">Size Wise Summary</td>
+                                                    <tr class="gridDark">
+                                                        <td style="padding:5px;">Size</td>
+                                                        <td style="padding:5px;">Total Container</td>
+                                                    <tr class="gridDark">
+                                                        <td style="padding:5px;">20'</td>
+                                                        <td style="padding:5px;" align="right">{{t20}}</td>
+                                                    <tr class="gridDark">
+                                                        <td style="padding:5px;">40'</td>
+                                                        <td style="padding:5px;" align="right">{{t40}}</td>
+                                                    <tr class="gridDark">
+                                                        <td style="padding:5px;">45'</td>
+                                                        <td style="padding:5px;" align="right">{{t45}}</td>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <app-footer></app-footer>
+</div>

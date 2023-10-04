@@ -1,0 +1,185 @@
+
+            <table *ngFor="let mlo_wise_excel_uploaded of mlo_wise_export;let i=index;">
+
+                <div class="row">
+                    <table width="70%" border='0' cellpadding='0' cellspacing='0' align="center">
+                        <tr bgcolor="#ffffff" align="center" height="100px">
+                            <td colspan="13" align="center">
+                                <table border=0 width="100%">
+                                    <tr align="center">
+                                        <td colspan="13"><img width="250px" height="80px" src="../../assets/img/cpanew.jpg"
+                                                class="cpa-logo"></td>
+                                    </tr>
+                                    <tr align="center">
+                                        <td colspan="13">
+                                            <font size="4"><b><u>Export Upload Report</u></b></font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><b>Vessel:</b></td>
+                                        <td align="left">
+                                            <font size="3"><b>{{vsl_Name}}</b></font>
+                                        </td>
+                                        
+                                        <td align="right">
+                                            <font size="3"><b>EXP ROT.:</b></font>
+                                        </td>
+                                        <td align="left">
+                                            <font size="3"><b>{{ rotation_no}}</b></font>
+                                        </td>
+                                        <td colspan="3" align="right">
+                                            <font size="4"><b>Arrival Date:</b></font>
+                                        </td>
+                                        <td colspan="3" align="left">
+                                            <font size="4"><b>{{ata}}</b></font>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                
+                
+                    </table>
+                
+                    <table class="table table-bordered table-hover" class="table table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive">
+                            <thead>
+                                <tr>
+                                    <td><b>SlNo.</b></td>
+                                    <td style="width: 100px;"><b>Container No.</b></td>
+                                    <td><b>ISO Type</b></td>
+                                    <td><b>Size</b></td>
+                                    <td><b>Height</b></td>
+                                    <td><b>MLO</b></td>
+                                    <td><b>Status</b></td>
+                                    <td><b>Weight</b></td>
+                                    <td><b>POD</b></td>
+                                    <td><b>Stowage</b></td>
+                                    <td><b>Loaded Time</b></td>
+                                    <td style="width: 100px;"><b>Seal No</b></td>
+                                    <td><b>Coming From</b></td>
+                                    <td><b>Truck No</b></td>
+                                    <td><b>Craine Id</b></td>
+                                    <td style="width: 100px;"><b>Commodity</b></td>
+                
+                                    <td style="width: 100px;"><b>User Id</b></td>
+                
+                                </tr>
+                
+                
+
+                            <!-- <span>{{setOffDock(mlo_wise_excel_uploaded.mlo)}}</span> -->
+                            
+                        
+            
+                            <tr *ngFor="let mlo_wise_final_loading_details of mlo_wise_excel_uploaded.containerList;let i=index;"  >
+                                <td align="center">
+                                    {{i+1}}
+                                </td>
+                                <td align="center" style="width: 100px;">
+                                    <font size="2">{{mlo_wise_final_loading_details.id}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.iso}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.size}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.height}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.mlo}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.freight_kind}}</font>
+                                </td>
+
+                                
+                        
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.weight}}</font>
+                                </td>
+
+                                <!-- <span>{{setWeight(mlo_wise_final_loading_details.weight,mlo_wise_final_loading_details.mlo)}}</span> -->
+                                
+                                
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.pod}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.stowage_pos}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.last_update}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.seal_no}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.coming_from}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.truck_no}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.craine_id}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.short_name}}</font>
+                                </td>
+                                <td align="center">
+                                    <font size="2">{{mlo_wise_final_loading_details.user_id}}</font>
+                                </td>
+            
+                            </tr>
+
+
+                            <tr *ngIf="totalShowStatus" >
+
+                                <tr align="center" >
+                                    <td align="center"><b>Total</b></td>
+                                    <td align="center"> &nbsp;</td>
+                                    <td align="center">&nbsp;</td>		
+                                    <td align="center"></td>
+                                    <td align="center"> </td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center">{{mlo_wise_excel_uploaded.totalWeight}}</td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"><b></b></td>
+                                    <td align="center"><b></b></td>
+                                    <td align="center"><b></b></td>
+                                    <td align="center"><b></b></td>
+                                    <td align="center"><b></b></td>
+                            </tr>
+
+
+                                <!-- <td class="text-center">
+                                    <font size="2"><b>Total Weight:</b></font>
+                                </td>
+                                <td class="text-center">
+                                    <font size="2"><b>{{totalweight}}</b></font>
+                                </td> -->
+                            <!-- </tr> -->
+            
+                            <tr *ngIf="orgNameShowStatus">
+                                <td colspan="12">
+                                    <font size="3"><b>{{mlo_wise_excel_uploaded.mlo}}</b>
+                                    </font>
+                                </td>
+                            </tr>
+            
+
+                        </thead>
+
+                </table>
+
+
+
+
+
+
+                </div>
+            </table>

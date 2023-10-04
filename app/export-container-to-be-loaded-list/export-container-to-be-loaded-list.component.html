@@ -1,0 +1,116 @@
+<div class="row">
+            <table width="70%" border ='0' cellpadding='0' cellspacing='0' align="center">
+                <tr bgcolor="#ffffff" align="center" height="100px">
+                        <td colspan="13" align="center">
+                            <table border=0 width="100%">
+                                <tr align="center">
+                                    <td colspan="13"><img width="250px" height="80px" src="../../assets/img/cpanew.jpg" class="cpa-logo"></td>
+                                </tr>
+                                <tr align="center">
+                                    <td colspan="13"><font size="4"><b><u>Export Upload Report</u></b></font></td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><b>Vessel:</b></td>
+                                    <td align="left"><font size="3"><b>{{vsl_Name}}</b></font></td>
+                                    <td align="right"><font size="3"><b>Voy:</b></font></td>
+                                    <td align="left"><font size="3"><b>{{ voYNo}}</b></font></td>
+                                    <td align="right"><font size="3"><b>EXP ROT.:</b></font></td>
+                                    <td align="left"><font size="3"><b>{{ rotation_no}}</b></font></td>
+                                    <td colspan="3" align="right"><font size="4"><b>Arrival Date:</b></font></td>
+                                    <td colspan="3" align="left"><font size="4"><b>{{ata}}</b></font></td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+            
+    
+            </table>
+
+
+
+    <div  style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+        <table class="table table-bordered table-responsive-sm table-hover">
+            <thead>
+
+
+                <tr  align="center">
+                    <td style="border-width:3px;border-style: double;"><b>SlNo.</b></td>
+                    <td style="border-width:3px;border-style: double;"><b>Container No.</b></td>
+                    <td style="border-width:3px;border-style: double;"><b>Type</b></td>
+                    <td style="border-width:3px;border-style: double;"><b>MLO</b></td>
+                    <td style="border-width:3px;border-style: double;"><b>Status</b></td>		
+                    <td style="border-width:3px;border-style: double;"><b>Weight</b></td>
+                    <td style="border-width:3px;border-style: double;"><b>POD</b></td>
+                    <td style="border-width:3px;border-style: double;"><b>Stowage</b></td>
+                    <td style="border-width:3px;border-style: double;"><b>Short Name</b></td>
+                    
+                </tr>
+            
+
+            
+            </thead>
+            <tbody *ngFor="let export_container_to_be_loaded of exportContainerToBeLoadedContainerList;let i=index;">
+     
+
+                    <tr>
+                        <td align="center"><font size="2">{{i+1}}</font></td>
+                        <td align="center"><font size="2">{{export_container_to_be_loaded.id}}</font></td>
+                        <td  align="center"><font size="2">{{export_container_to_be_loaded.iso}}</font></td>
+                        <td align="center"><font size="2">{{export_container_to_be_loaded.mlo}}</font></td>
+                        
+                        <td align="center"><font size="2">{{export_container_to_be_loaded.freight_kind}}</font></td>
+                        <td align="center"><font size="2">{{export_container_to_be_loaded.weight}}</font></td>
+                        <td  align="center"><font size="2">{{export_container_to_be_loaded.pod}}</font></td>
+                        <td align="center"><font size="2">{{export_container_to_be_loaded.fcy_last_pos_slot}}</font></td>
+                        <td align="center"><font size="2">{{export_container_to_be_loaded.short_name}}</font></td>
+                 
+    
+                    </tr>
+</tbody>
+        </table>
+
+
+
+
+        <table width="100%" border ='0' cellpadding='0' cellspacing='0'>
+            <tr><td colspan="12" align="center"><font size="4"><b><u>Export Container Balance To Be Loaded Summary Report</u></b></font></td></tr>
+            <tr><td colspan="12" align="center"><font size="4"><b>&nbsp;</b></font></td></tr>
+            </table>
+            <table width="100%" border ='1' cellpadding='0' cellspacing='0'>
+                <tr>
+                    
+                    <td colspan="6" align="center">BALANCE TO LOAD</td>
+                </tr>
+                <tr>
+                    
+                    <td colspan="2" align="center">LADEN</td>
+                    <td colspan="2" align="center">EMPTY</td>
+                    <td colspan="2" align="center">TUES</td>
+                    
+                </tr>
+                <tr>
+                
+                    <td align="center">20</td>
+                    <td align="center">40</td>
+                    <td align="center">20</td>
+                    <td align="center">40</td>
+                    <td align="center">LD</td>
+                    <td align="center">MT</td>
+                </tr>
+                <tr *ngFor="let export_container_to_be_loaded of ContainerBalanceList;let i=index;">
+                    
+                
+                    <td align="center">{{export_container_to_be_loaded.balance_LD_20}}</td>
+                    <td align="center">{{export_container_to_be_loaded.balance_LD_40}}</td>
+                    <td align="center">{{export_container_to_be_loaded.balance_MT_20}}</td>
+                    <td align="center">{{export_container_to_be_loaded.balance_MT_40}}</td>
+                    <td align="center">{{export_container_to_be_loaded.balance_LD_tues}}</td>
+                    <td align="center">{{export_container_to_be_loaded.balance_MT_tues}}</td>
+                    
+            
+                    
+                </tr>
+            </table>
+    </div>
+ 
+</div>

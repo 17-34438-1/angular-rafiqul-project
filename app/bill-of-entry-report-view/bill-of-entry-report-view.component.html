@@ -1,0 +1,98 @@
+
+
+
+
+
+
+<div class="col-12">
+    <div style="margin-left: 550px;">
+     <img width="250px" height="80px" src="../../assets/images/cpanew.jpg">
+
+    </div>
+
+    
+    <div class="col-md-12"> 
+            <table  class="table table-bordered table-hover table-fixed ">
+                <thead>
+                    <tr>
+                        <th>Sl</th>
+                        <th>Office Code</th>
+                        <th>C Number</th>
+                        <th>BE Date</th>
+                        <th>Exit Note Number</th>
+                        <th>Entry Date</th>
+                        <th>Total Container</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let vesselInfo of containerVesselInfo;let i=index;  ">
+                        <tr class="text-center" *ngIf="vesselInfo.placeDec=='';" style="background-color:#FB4444;">  
+                  
+                        <td>{{i+1}}</td>
+                       
+                        <td >{{vesselInfo.officeCode}}</td>
+                        <td >{{vesselInfo.regNo}}</td>
+                        <td  >{{vesselInfo.regDate}}</td>
+                        <td  >{{vesselInfo.placeDec }}</td>
+                        <td  >{{vesselInfo.entryDate}}</td>
+                        <td  >{{vesselInfo.containerNo}}</td>
+                        </tr>
+
+
+<!-- 
+                    <tr>  
+                  
+                        <td [ngClass]="{'red': vesselInfo.placeDec == ''}">{{i+1}}</td>
+                       
+                        <td  [ngClass]="{'red': vesselInfo.placeDec == ''}">{{vesselInfo.officeCode}}</td>
+                        <td  [ngClass]="{'red': vesselInfo.placeDec == ''}">{{vesselInfo.regNo}}</td>
+                        <td  [ngClass]="{'red': vesselInfo.placeDec == ''}">{{vesselInfo.regDate}}</td>
+                        <td  [ngClass]="{'red': vesselInfo.placeDec == ''}" >{{vesselInfo.placeDec }}</td>
+                        <td  [ngClass]="{'red': vesselInfo.placeDec == ''}">{{vesselInfo.entryDate}}</td>
+                        <td  [ngClass]="{'red': vesselInfo.placeDec == ''}">{{vesselInfo.containerNo}}</td>
+                        </tr>
+ -->
+
+                        <tr  class="text-center" *ngIf="vesselInfo.placeDec!=='';" style="background-color:#f8f7f8;" >  
+                            <td>{{i+1}}</td>
+                         
+                          <!-- <span>{{setPlaceDec(vesselInfo.placeDec )}}</span>  -->
+                            <td>{{vesselInfo.officeCode}}</td>
+                            <td>{{vesselInfo.regNo}}</td>
+                            <td>{{vesselInfo.regDate}}</td>
+                            <td>{{vesselInfo.placeDec }}</td>
+                            <td>{{vesselInfo.entryDate}}</td>
+                           
+                        </tr> 
+
+<!--  <span>{{setDistrict(districtResult.dist)}}</span>
+                        <tr *ngIf="totalContainerDistrictWiseShowStatus">
+                            <td class="col-1">
+                                <font size="3"><b>Total Container:</b></font>
+                            </td>
+                            <td class="text-center">
+                                <font size="3"><b>{{countEachDistrictWise}}</b></font>
+                            </td>
+                        </tr>
+            
+                        <tr *ngIf="districtNameShowStatus">
+                            <td colspan="6"><font size="3"><b>{{districtResult.dist}}</b>
+                                </font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  align="center">{{k}}</td>
+                            <td  align="center">{{districtResult.id}}</td>
+                            <td  align="center">{{districtResult.mlocode}}</td>
+                            <td  align="center">{{districtResult.cont_size}}</td>
+                            <td  align="center">{{districtResult.cont_height}}</td>
+                            <td  align="center">{{districtResult.cont_status}}</td>
+                        </tr>    -->
+                     
+                </tbody>
+
+            </table>
+    </div>
+
+</div>
+
+

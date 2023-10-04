@@ -1,0 +1,128 @@
+
+
+
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <app-sidebar></app-sidebar>
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="row">
+
+                   
+                    <div class="col-12">                        
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title" style="margin-top: 1px;">TODAY'S EDI DECLARATION</h3>
+                            </div>
+                      
+                    <div style="margin-top: 20px;"> 
+                      
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button type="button" class="btn btn-primary">  ROTATION NO :</button>
+                                    </div>
+                                    <input type="text" [(ngModel)]="terminal" id="terminal" class="form-control" placeholder="">
+                                </div>                                        
+                            </div>
+                        </div>
+                  
+            
+                        <div class="form-group" align="center" style="margin-top: 20px;">
+                            <a type="button" (click)="onSubmit()" class="btn btn-sm btn-info">Show</a>
+                        </div>
+                    </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <table border="0" width="1000px" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td align="center"><img width="250px" height="80px" src="../../assets/img/cpanew.jpg"></td>
+                                            </tr>
+                                            
+                                        </table>
+                                    </div>
+                                  
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped table-hover table-fixed table-sm"> 
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">Sl</th>
+                                                <th class="text-center">EDI File</th>
+                                                <th class="text-center">Stow File</th>
+                                                <th class="text-center">Status</th>
+                                                <th class="text-center">Declaration</th>
+                                        
+                                            
+                                        
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let yardList of yardInfo let i = index" >
+                                          
+                                            <th scope="row" class="text-center">{{ i+1 + (tableSize * (page-1)) }}</th>
+
+                                            <!-- download="{{yardList.file_name_stow}}"
+                                            download="{{yardList.file_name_edi}}" -->
+
+                                            <!-- (click)="onSubmitDoneForStow(yardList.file_name_stow)" 
+                                            (click)="onSubmitDoneForEdi(yardList.file_name_edi)"  -->
+
+                                            <td class="text-center"  > <a  href="{{path}}"  download="{{yardList.file_name_edi}}" target="_blank" >{{yardList.file_name_edi}}</a></td>
+                                            <td class="text-center"  > <a  href="http://cpatos.gov.bd/pcs/resources/edi/{{yardList.file_name_stow}}"  download target="_blank">{{yardList.file_name_stow}}</a> </td>
+                                            <td class="text-center"  > <a  (click)="onSubmitDoneEdi(yardList.id)"  >Done EDI</a> </td>
+                                             <td class="text-center"  > <a  [routerLink]="['/IgmOperation/todaysEdiDeclarationList',yardList.id]"   target="_blank">View</a> </td>
+
+                                            
+                                            
+                                            
+                                            
+                                            <!-- <td><a href="http://cpatos.gov.bd/pcs/resources/edi/{{yardList.file_name_edi}}" class="btn btn-default" target="_blank" download="{{yardList.file_name_edi}}">Download Now</a></td> -->
+                                           
+                                           
+                                          
+                                            <!-- <td><a href="assets/img/2022_4081.pdf" class="btn btn-default" target="_blank" download="2022_4081.pdf">Download Now</a></td> -->
+                                           
+                                            <!-- <td><a href="http://cpatos.gov.bd/pcs/resources/edi/{{yardList.file_name_stow}}"  class="btn btn-default" target="_blank" download="2022_4081.pdf">Download Now</a></td> -->
+                                            <!-- <td><a href="assets/img/cpanew.jpg" class="btn btn-default" target="_blank" download="cpanew.jpg">Download Now</a></td> -->
+                                            <!-- <td class="text-center"  *ngIf="isEditable"> <a  [routerLink]="['/IgmOperation/todaysEdiDeclarationList',yardList.id]"   target="_blank">View</a> </td> -->
+                                        
+                                        </tr>
+                                        </tbody>                                        
+                                    </table>
+                                  
+                                </div>                                
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- Labor Category List Ends -->
+
+
+    <app-footer></app-footer>
+</div>
+<!-- ./wrapper -->

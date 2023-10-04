@@ -1,0 +1,46 @@
+
+
+<div class="container">
+    <div    class="row">
+        <table class=" table-hover" align="center">
+         
+            <tr>
+                <td>
+          
+                    <h1 align='center'>Vessel:{{name}} </h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+<table align="center"  *ngFor="let blankInfoData of blankBayView" cellspacing="0" cellpadding="0" >
+    <tbody>
+
+
+    <tr>  
+        <td></td><td  class="nogrid" align="center" ><b> Bay:{{blankInfoData.title}}<br></b></td>
+    </tr> 
+    <tr>
+        <td></td>
+        <td  *ngFor="let link of blankInfoData.maxData" class="nogrid" align="center"><b><br>{{link.kl}}</b></td>
+        <td  class="nogrid" align="center"><b><br>00</b></td>
+        <td  *ngFor="let links of blankInfoData.minMaxData" class="nogrid" align="center"><b><br>{{links.l}}</b></td>
+    
+    </tr>
+   
+     <tr *ngFor="let linkMax of blankInfoData.maxDataDinamicArrays">
+        <td   class="nogrid" align="center">{{linkMax.i}}</td>
+        <td *ngFor="let linkMaxDataRight of blankInfoData.maxDataDinamics"   class="grid" align="center"></td>
+        <!-- <td *ngFor="let linkMaxDataCenter of blankInfoData.maxMinDataDinamic"   class="grid" align="center"></td> -->
+        
+    </tr>
+   
+
+</tbody>
+
+
+</table>

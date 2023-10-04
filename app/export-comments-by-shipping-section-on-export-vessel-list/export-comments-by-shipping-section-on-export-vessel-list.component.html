@@ -1,0 +1,105 @@
+
+    <div class="container">
+        <div class="row">
+            <table class=" table-hover" align="center">
+                <tr>
+                    <td>
+                        <img align="center" src="../../assets/img/cpanew.jpg" class="rounded mx-auto mt-2 d-block" 
+                            width="250px" height="80px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4 align="center"><b>Vessel List With Comments by Shipping Section</b></h4>
+                        <h3  align="center"> From {{fromDate}} To {{toDate}}</h3>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+        <table class="table  table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive-sm">
+            <thead>
+                <tr align="center">
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>SL.</b></td>
+                    <td style="border-width:3px;border-style: double;width: 140px;"><b>Vessel Name</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>Import Rotation</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>Export Rotation</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>Agent</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>Berth Operator</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>Status</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>ETA</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>ETD</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>ATA</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>ATD</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>Status</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>Status Time</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>Comments</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>Comments By</b></td>
+                    <td style="border-width:3px;border-style: double;width: 100px;"><b>Comments Time</b></td>
+
+                </tr>
+
+
+            </thead>
+
+            <tbody *ngFor="let exportCommentByShippingData of exportCommentByShipping;let i=index;">
+                <tr>
+
+                    <td align="center">
+                        <font size="2">{{i+1}}</font>
+                    </td>
+
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.name}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.ib_vyg}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.ob_vyg}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.agent}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.berthop}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.phase_str}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.eta}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.etd}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.ata}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.atd}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.comments}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.comments_time}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.pre_comments}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.comments_by}}</font>
+                    </td>
+                    <td align="center">
+                        <font size="2">{{exportCommentByShippingData.pre_comments_time}}</font>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+

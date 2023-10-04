@@ -1,0 +1,45 @@
+
+<div class="col-12">
+    <div style="margin-left: 550px;">
+     <img width="250px" height="80px" src="../../assets/images/cpanew.jpg">
+    </div>
+
+    
+    <div class="col-md-12"> 
+            <table  class="table table-bordered table-hover table-fixed ">
+                <thead>
+                    <tr>
+                        <th>Sl</th>
+                        <th>Ip Address</th>
+                        <th>Total Entry</th>
+                       
+                    </tr>
+                    
+                      
+                    
+                </thead>
+                <tbody >
+                        <tr *ngFor="let vesselInfo of containerVesselInfo;let i=index;  ">  
+                        <td>{{i+1}}</td>
+                        <td>{{vesselInfo.ip_address }}</td>
+                        <td>{{vesselInfo.total}}</td>
+                       
+                        </tr>
+                        <tr>
+                          
+                            <td align="center" colspan="2"><b>Total</b></td> 
+                            <td align="center"><b>{{totalEnty}}</b></td> 
+                        </tr>
+                           
+                        
+                       
+                </tbody>
+            </table>
+
+           
+
+    </div>
+
+</div>
+
+

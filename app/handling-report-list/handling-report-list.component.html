@@ -1,0 +1,232 @@
+
+<html>
+<body style="padding:10px;">
+<table width="100%" border ='0' cellpadding='0' cellspacing='0'>
+ 
+ 
+<tr bgcolor="#ffffff" align="center" height="100px">
+		<td colspan="13" align="center">
+			<table border=0 width="100%">
+				
+				<tr >
+					<td align="center" colspan="12"><img align="middle"  width="220px" height="70px" src="../../assets/img/cpanew.jpg"></td>
+				</tr>
+			
+			
+				<tr align="center">
+					<td colspan="12"><font size="4"><b>24 HRS. CONTAINER HANDLING REPORT OF {{workDateContainer}}</b></font></td>
+				</tr>
+				<tr align="center">
+					<td colspan="12"><font size="4"><b></b></font></td>
+				</tr>
+
+				
+
+			</table>
+		
+		</td>
+		
+	</tr>
+	</table>
+
+
+
+    <table width="40%" border ='0' cellpadding='0' cellspacing='0'>
+		<tr>
+			<td><font size="4"><b> Date : {{workDateContainer}}</b></font></td>
+		</tr>
+		<tr><td>VESSEL NAME - </td><td>{{name}}</td></tr>
+		<tr><td>VOYAGE - </td><td> {{" "}}</td></tr>
+		<tr><td>IMP.ROT. - </td><td>{{ib_vyg}}</td></tr>
+		<tr><td>EXP.ROT. - </td><td>{{ob_vyg}}</td></tr>
+		<tr><td>BERTH NO - </td><td>{{berth}}</td></tr>
+		<tr><td>SHIPPING AGENT - </td><td>{{shipping_agent}}</td></tr>
+		<tr><td>ARRIVED DATE - </td><td>{{arrived_date}}</td></tr>
+		<tr><td>EXPECTED TIME OF DEPARTURE - </td><td>{{departure_date}}</td></tr>
+	</table>
+	
+<br>
+<br>
+	
+	<div class="table-responsive" >
+        <table  width="100%" border ='2' cellpadding='0' cellspacing='0'>
+            <thead>
+                <tr class="gridDark">
+                    <td align="center" colspan="18"><b>IMPORT</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="gradeX">
+                    <td align="center" colspan="6"><b>DISCHARGED</b></td>
+                    <td align="center" colspan="6"><b>TOTAL DISCHARGED</b></td>
+                    <td align="center" colspan="6"><b>BALANCE ON BOARD</b></td>
+                </tr>
+                <tr class="gradeX">
+                    <td align="center" colspan="2"><b>LADEN</b></td>
+                    <td align="center" colspan="2"><b>EMPTY</b></td>
+                    <td align="center" colspan="2"><b>TEUS</b></td>
+                    <td align="center" colspan="2"><b>LADEN</b></td>
+                    <td align="center" colspan="2"><b>EMPTY</b></td>
+                    <td align="center" colspan="2"><b>TEUS</b></td>
+                    <td align="center" colspan="2"><b>LADEN</b></td>
+                    <td align="center" colspan="2"><b>EMPTY</b></td>
+                    <td align="center" colspan="2"><b>TEUS</b></td>
+                </tr>
+                <tr class="gradeX">
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>LT</b></td>
+                    <td><b>MT</b></td>
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>LT</b></td>
+                    <td><b>MT</b></td>
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>LT</b></td>
+                    <td><b>MT</b></td>
+                </tr>
+                
+                <tr class="gradeX"  *ngFor="let importContainerHandling of ImportContainerHandling; ">
+                    <td>{{importContainerHandling.disch_load20}}</td>
+                    <td>{{importContainerHandling.disch_load40}}</td>
+                    <td>{{importContainerHandling.disch_mty20}}</td>
+                    <td>{{importContainerHandling.disch_mty40}}</td>
+                    <td>{{importContainerHandling.load_teus}}</td>
+                    <td>{{importContainerHandling.mty_teus}}</td>                 
+                    
+                    <td>{{importContainerHandling.tot_disch_load20}}</td>
+                    <td>{{importContainerHandling.tot_disch_load40}}</td>
+                    <td>{{importContainerHandling.tot_disch_mty20}}</td>
+                    <td>{{importContainerHandling.tot_disch_mty40}}</td>
+                    <td>{{importContainerHandling.tot_disch_load_teus}}</td>
+                    <td>{{importContainerHandling.tot_disch_mty_teus}}</td>
+                    
+                    <td>{{importContainerHandling.bal_load20}}</td>
+                    <td>{{importContainerHandling.bal_load40}}</td>
+                    <td>{{importContainerHandling.bal_mty20}}</td>
+                    <td>{{importContainerHandling.bal_mty40}}</td>
+                    <td>{{importContainerHandling.bal_load_teus}}</td>
+                    <td>{{importContainerHandling.bal_mty_teus}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<br>
+<br>
+
+	<div class="table-responsive">
+        <table width="100%" border ='2' cellpadding='0' cellspacing='0'>
+            <thead>
+                <tr class="gridDark">
+                    <td align="center" colspan="18"><b>EXPORT</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="gradeX">
+                    <td align="center" colspan="6"><b>LOADED</b></td>
+                    <td align="center" colspan="6"><b>TOTAL LOADED</b></td>
+                    <td align="center" colspan="6"><b>BALANCE TO BE SHIPPED</b></td>
+                </tr>
+                <tr class="gradeX">
+                    <td align="center" colspan="2"><b>LADEN</b></td>
+                    <td align="center" colspan="2"><b>EMPTY</b></td>
+                    <td align="center" colspan="2"><b>TEUS</b></td>
+                    <td align="center" colspan="2"><b>LADEN</b></td>
+                    <td align="center" colspan="2"><b>EMPTY</b></td>
+                    <td align="center" colspan="2"><b>TEUS</b></td>
+                    <td align="center" colspan="2"><b>LADEN</b></td>
+                    <td align="center" colspan="2"><b>EMPTY</b></td>
+                    <td align="center" colspan="2"><b>TEUS</b></td>
+                </tr>
+
+                <tr class="gradeX">
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>LT</b></td>
+                    <td><b>MT</b></td>
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>LT</b></td>
+                    <td><b>MT</b></td>
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>20</b></td>
+                    <td><b>40</b></td>
+                    <td><b>LT</b></td>
+                    <td><b>MT</b></td>
+                </tr>
+                
+                <tr class="gradeX"  *ngFor="let exportContainerHandling of ExportContainerHandling; ">
+
+
+                    <td>{{exportContainerHandling.disch_load20}}</td>
+                    <td>{{exportContainerHandling.disch_load40}}</td>
+                    <td>{{exportContainerHandling.disch_mty20}}</td>
+                    <td>{{exportContainerHandling.disch_mty40}}</td>
+                    <td>{{exportContainerHandling.load_teus}}</td>
+                    <td>{{exportContainerHandling.mty_teus}}</td>
+                  
+                    
+                    <td>{{exportContainerHandling.tot_disch_load20}}</td>
+                    <td>{{exportContainerHandling.tot_disch_load40}}</td>
+                    <td>{{exportContainerHandling.tot_disch_mty20}}</td>
+                    <td>{{exportContainerHandling.tot_disch_mty40}}</td>
+                    <td>{{exportContainerHandling.tot_disch_load_teus}}</td>
+                    <td>{{exportContainerHandling.tot_disch_mty_teus}}</td>
+                    
+                    <td>{{exportContainerHandling.bal_load20}}</td>
+                    <td>{{exportContainerHandling.bal_load40}}</td>
+                    <td>{{exportContainerHandling.bal_mty20}}</td>
+                    <td>{{exportContainerHandling.bal_mty40}}</td>
+                    <td>{{exportContainerHandling.bal_load_teus}}</td>
+                    <td>{{exportContainerHandling.bal_mty_teus}}</td>
+
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+<br>
+<br>
+<div class="table-responsive">
+<table  width="100%" border ='2' cellpadding='0' cellspacing='0'>
+	<thead>
+		<tr>
+			<td align="center" colspan="2" ><b>PROGRAM</b></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="center" ><b>IMPORT-NIL</b></td>
+			<td align="center" ><b>EXPORT-NIL</b></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<br>
+<table width="100%" border ='0' cellpadding='0' cellspacing='0' align="center">
+	<tr>
+		<td align="left" ><b>{{workDateContainer}}</b></td>
+		<td align="right" ><b>SHIP/YARD PLANNER</b></td>
+	</tr>
+</table>
+
+<span *ngIf="length>0 && ExportContainerHandling.length==length && show==true && options=='pdf'">{{print()}}></span>
+

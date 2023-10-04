@@ -1,0 +1,58 @@
+
+    <div style="margin-left: 550px;margin-top: 30px;">
+        <img width="250px" height="80px" src="../../assets/img/cpanew.jpg" class="cpa-logo">
+    </div>
+    <h3 style="margin-left:500px;">DG CONTAINER BY ROTATION REPORT</h3>
+    <div class="col" style="margin-left:600px;">
+
+        Rotation No:{{rotation_no }}
+    </div>
+   
+    <div class="row" >
+        <table border="1" width="95%" align="center">
+    <!-- 
+    <div style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+    <table class="table table-responsive-sm  table-bordered"> -->
+
+            <thead>
+                <tr>
+                    <th class="text-center" style="width:3px;">Sl No.</th>
+                    <th class="text-center" style="width:3px;">Vessel Name</th>
+                    <th class="text-center" style="width:3px;">Registration No.</th>
+                    <th class="text-center" style="width:4px;">Container No.</th>			
+                    <th class="text-center" style="width:3px;">Size</th>	
+                    <th class="text-center" style="width:5px;">Seal No</th>
+                    <th class="text-center" style="width:3px;">Status</th>
+                    <th class="text-center" style="width:3px;">Description of Goods</th>
+                    <th class="text-center" style="width:3px;">DG Class</th>	
+                    <th class="text-center" style="width:3px;">UN No</th>	
+                    <th class="text-center" style="width:3px;">Bearth no</th>
+                    <th class="text-center" style="width:3px;">MLO</th>
+                    <th class="text-center" style="width:3px;">Remarks</th>	
+              
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dgContainerReport of dgInfo;let i=index;">
+                    <td align="center">{{i+1}}</td>
+
+
+                    <td align="center">{{dgContainerReport.vessel_Name}}</td>
+                    <td align="center">{{dgContainerReport.import_Rotation_No}}</td>
+                   
+                    <td align="center">{{dgContainerReport.cont_number}}</td>
+                    <td align="center">{{dgContainerReport.cont_size}}</td>
+                    <td align="center">{{dgContainerReport.cont_seal_number}}</td>
+                    <td align="center">{{dgContainerReport.cont_status}}</td>
+                    <td align="center">{{dgContainerReport.description_of_Goods}}</td>                   
+                    <td align="center">{{dgContainerReport.cont_imo}}</td>
+                    <td align="center">{{dgContainerReport.cont_un}}</td>                 
+                    <td align="center">{{dgContainerReport.berth}}</td>
+                    <td align="center">{{dgContainerReport.mlo}}</td>
+                    <td align="center">{{dgContainerReport.remarks}}</td>
+            
+                 
+                </tr>
+            </tbody>
+        </table>
+    </div>

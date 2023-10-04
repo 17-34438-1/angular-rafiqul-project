@@ -1,0 +1,158 @@
+
+
+ <!-- *ngFor="let gang of gangs" -->
+ <!-- [routerLink]="['/dg/dg-rotation-list-for-html']" -->
+  <!-- <button (click)="onSubmit()" [routerLink]="['/designation/category/edit'"  class="btn btn-primary">Show</button> -->
+
+
+
+                <div class="wrapper">
+                    <app-navbar></app-navbar>
+                    <app-sidebar></app-sidebar>
+                
+                    <!-- Labor Category List Starts -->
+                    <!-- Content Wrapper. Contains page content -->
+                    <div class="content-wrapper">
+                        <!-- Content Header (Page header) -->
+                        <section class="content-header">
+                            <div class="container-fluid">
+                                <div class="row mb-2">
+                                    <div class="col-sm-6">
+                                        <!-- <h1>Labor Category</h1> -->
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- <ol class="breadcrumb float-sm-right">
+                                            <li class="breadcrumb-item"><a href="#">Labor Category</a></li>
+                                            <li class="breadcrumb-item active">List</li>
+                                        </ol> -->
+                                    </div>
+                                </div>
+                            </div><!-- /.container-fluid -->
+                        </section>
+                
+                        <!-- Main content -->
+                        <section class="content">
+                            <div class="container">
+                                <div class="row">
+                
+                                   
+                                    <div class="col-12">                        
+                
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title" style="margin-top: 1px;">POD CODE LIST</h3>
+                                            </div>
+                                      
+                                    <div style="margin-top: 20px;"> 
+                                        <!-- <div class="form-group row justify-content-center">
+                                      
+                                            <button type="button" class="btn btn-primary"> ISO CODE</button>
+                                            <div class="col-sm-3">
+                                                <input type="text" [(ngModel)]="type" id="rotation_no" class="form-control" placeholder="">
+                                            </div>
+                                        </div> -->
+                                        <div class="row">
+                                            <div class="col-md-6 offset-md-3">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <!-- <span class="input-group-text">Labor Category</span> -->
+                                                        <button type="button" class="btn btn-primary"> POD CODE</button>
+                                                    </div>
+                                                    <input type="text" [(ngModel)]="rotation_no" id="rotation_no" class="form-control" placeholder="">
+                                                </div>                                        
+                                            </div>
+                                        </div>
+                                  
+                            
+                                        <div class="form-group" align="center" style="margin-top: 20px;">
+                                           
+                                            <!-- [routerLink]="['/dg/dg-rotation-list-for-html']" -->
+                                            <a type="button" (click)="onSubmit()" class="btn btn-sm btn-info">Show</a>
+                                            <!-- <button (click)="onSubmit()" [routerLink]="['/designation/category/edit'"  class="btn btn-primary">Show</button> -->
+                                        </div>
+                                    </div>
+                                            <!-- /.card-header -->
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                       
+                                                    </div>
+                                                    <div class="col-3">                                        
+                                                     
+                                                            <div class="card-tools">
+                                                                <div class="input-group input-group-sm float-right" style="width: 200px;">
+                                                                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search"
+                                                                        (keyup)="onSearchInput()" [(ngModel)]="filterTerm" >
+                                                
+                                                                    <div class="input-group-append">
+                                                                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered table-condensed table-striped table-hover table-fixed table-sm">  <!--table-head-fixed text-nowrap-->
+                                                        <thead> <!--class="thead-dark"-->
+                                                            <tr>
+                                                                <th scope="col">S No.</th>
+                                                                <th scope="col">POD CODE</th>
+                                                            
+                                                                <th scope="col">POD NAME</th>
+                                                        
+                                                            
+                                                        
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr
+                                                                *ngFor="
+                                                                let podInfoData of podInfo  
+                                                                    | filter: filterTerm 
+                                                                    | paginate
+                                                                        : {
+                                                                            itemsPerPage: tableSize,
+                                                                            currentPage: page,
+                                                                            totalItems: count
+                                                                        };
+                                                                    let i = index                                     
+                                                                "
+                                                                >
+                                                                <th scope="row" class="text-center">{{ i+1 + (tableSize * (page-1)) }}</th>
+                                                                <td>{{podInfoData.place_code}}</td>
+                                                                <td>{{podInfoData.place_name}}</td>
+                                                            
+                                                               
+                                                            </tr>
+                                                        </tbody>                                        
+                                                    </table>
+                                                    <div class="d-flex justify-content-center">
+                                                        <pagination-controls
+                                                          previousLabel="Prev"
+                                                          nextLabel="Next"
+                                                          (pageChange)="onTableDataChange($event)"
+                                                        >
+                                                        </pagination-controls>
+                                                    </div>
+                                                </div>                                
+                                            </div>
+                                            <!-- /.card-body -->
+                                        </div>
+                                        <!-- /.card -->
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.container-fluid -->
+                        </section>
+                        <!-- /.content -->
+                    </div>
+                    <!-- /.content-wrapper -->
+                    <!-- Labor Category List Ends -->
+                
+                
+                    <app-footer></app-footer>
+                </div>
+                <!-- ./wrapper -->

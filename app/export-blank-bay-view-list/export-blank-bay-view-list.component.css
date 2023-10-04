@@ -1,0 +1,39 @@
+        .grid
+		{
+			font-family: Verdana,Geneva,sans-serif;
+			border: 1px solid #000;
+			height:60px;
+			width: 70px;
+		}
+		
+		.gridcolor
+		{
+			font-family: Verdana,Geneva,sans-serif;
+			border: 1px solid #000;
+			height: 60px;
+			width: 70px;
+			background-color:#0099FF;
+			color:white;
+		}
+		
+		.nogrid
+		{
+			height: 60px;
+			width: 70px;
+		}
+		
+		hr
+		{ 
+			/*height: 12px; 
+			border: 0; 
+			box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5); */
+			display: block;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			margin-left: auto;
+			margin-right: auto;
+			border-style: inset;
+			border-width: 3px;
+		}
+		
+		.pagebreak { page-break-before: always; }

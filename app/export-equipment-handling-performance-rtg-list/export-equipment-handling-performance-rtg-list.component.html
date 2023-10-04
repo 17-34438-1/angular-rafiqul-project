@@ -1,0 +1,75 @@
+
+<div class="row">
+    <div class="col-3">
+      
+    </div>
+    <div class="col-12 mt-4">
+       
+        <img align="center" src="../../assets/img/logo_cpa.gif" class="rounded mx-auto d-block" alt="..." width="250px" height="80px">
+
+        <h3 align="center">EQUIPMENT HANDLING PERFORMANCE HISTORY</h3>
+        <div class="row">
+            <div class="col-4">
+                <h5 align="center">From Date : {{fromDate}}</h5>
+            </div>
+            <div class="col-4">
+                <h5 *ngIf="show" align="center">To Date : {{toDate}}</h5>
+            </div>
+            <div class="col-4">
+                <h5 align="center">Shift : {{shift}}</h5>
+            </div>
+        </div>
+      
+
+        <!-- class="table table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive-sm"  -->
+   
+        <table class="table table-bordered table-condensed table-striped table-hover table-sm table-responsive-sm" >
+            <thead>
+                <tr>
+                    
+                    <td  class="text-center"><b>SlNo.</b></td>
+                    <td  class="text-center"><b>RTG # NO.</b></td>
+                    <td  class="text-center"><b>Start VMT Log in Time</b></td>
+                    <td  class="text-center"><b>End VMT Log out Time</b></td>
+                    <td  class="text-center" ><b>ID NO</b></td>
+                    <td  class="text-center"  style="width:200px;" ><b>RTG Operator Name</b></td>		
+                    <td  class="text-center" ><b>Export Receiving</b></td>
+                    <td  class="text-center"><b>Yard Move</b></td>
+                    <td  class="text-center"><b>Shifting</b></td>
+                    <td  class="text-center"><b>Total Handling Boxes</b></td>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let result  of resultList | filter: searchText;let i = index;let c = count">
+                    <td scope="col" align="center">{{i+1}}</td>
+                    <td scope="col" align="center">{{result.eq}}</td>
+                    <td align="center">{{result.log_in_time}}</td>
+                    <td align="center">{{result.log_out_time}}</td>                 
+                    <td  align="center">{{result.logBy}}</td>           
+                    <td  align="center">{{result.short_name}}</td>
+                   
+                    <td scope="col" align="center">{{result.expRcv}}</td>
+                    <td scope="col" align="center">{{result.yardMove}}</td>
+                    <td scope="col" align="center">{{result.expShift}}</td>                
+                    <td scope="col" align="center">{{result.totalHandingBox}}</td>
+                   
+                </tr>
+                
+                <tr bgcolor="#E0FFFF" align="center">
+                    <td  colspan="6"><font size="4"><b>Total:</b></font></td>                  
+                    <td scope="col"><font size="4"><b>{{imRtotal}}</b></font></td>
+                    <td scope="col"><font size="4"><b>{{keepDTotal}}</b></font></td>
+                    <td scope="col"><font size="4"><b>{{dOffTotal}}</b></font></td>                   
+                    <td scope="col"><font size="4"><b>{{total}}</b></font></td>
+                   
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+   
+</div>
+
+
+

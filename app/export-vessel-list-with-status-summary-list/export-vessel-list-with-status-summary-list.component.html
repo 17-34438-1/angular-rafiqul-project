@@ -1,0 +1,124 @@
+
+  
+    <table width="100%" border ='0' cellpadding='0' cellspacing='0' style="margin-top: 25px;" class="table  table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive-sm">
+        <tr bgcolor="#ffffff" align="center" height="100px">
+                <td width="30%" align="centre">  <img width="250px" height="80px" src="../../assets/img/cpanew.jpg" class="cpa-logo"></td>
+                <td width="70%" align="center">
+                    <table border=0 width="100%" class="table  table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive-sm">
+                        <tr>
+                            <td ><font size="4">M.V. </font></td>
+                            <td colspan="3" style="text-decoration: underline;text-decoration-style:dotted;"><font size="4"><b>{{vsl_Name}}</b></font></td>
+                            <td><font size="4">VOY</font></td>
+                            <td colspan="3" style="text-decoration: underline;text-decoration-style:dotted;"><font size="4"><b> {{ voYNo}}</b></font></td>
+                            <td ><font size="4">ROT/NO</font></td>
+                            <td colspan="3" style="text-decoration: underline;text-decoration-style:dotted;"><font size="4"><b>{{ rotation_no}}</b></font></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><font size="4">Arrived on</font></td>
+                            <td colspan="2" style="text-decoration: underline;text-decoration-style:dotted;"><font size="4"><b>{{ ata}}</b></font></td>
+                            <td colspan="2" ><font size="4">Sailed on</font></td>
+                            <td colspan="2" style="text-decoration: underline;text-decoration-style:dotted;"><font size="4"><b> {{atd}}</b></font></td>
+                            <td colspan="2" ><font size="4">Berth No</font></td>
+                            <td colspan="2" style="text-decoration: underline;text-decoration-style:dotted;"><font size="4"><b>{{berth}}</b></font></td>
+                        </tr>
+        
+                        <tr>
+                            <td colspan="7" align="center"><font size="5"><b> <u>MLO WISE EXPORT SUMMARY</u></b></font></td>
+                            
+                        </tr>
+        
+                    </table>
+                
+                </td>
+                
+            </tr>
+            
+            <tr bgcolor="#ffffff" align="center" height="25px">
+                <td colspan="15" align="center"></td>
+                
+            </tr>
+        </table>
+    
+
+    <div  style="margin-top:20px; margin-left:20px;margin-right:20px ;">
+        <table class="table  table-bordered table-condensed table-striped table-hover table-fixed table-sm table-responsive-sm">
+            <thead>
+                <tr>
+                    <!-- style="width: 200px;" -->
+                    <td style="width: 160px;"></td>
+                    <td colspan="11"  align="center"><b>LADEN</b></td>
+                    <td colspan="11" align="center"><b>EMPTY</b></td>
+                    <td style="width: 40px;"align="center"></td>
+                    <td style="width: 70px;"align="center"></td>
+                    <td style="width: 70px;"align="center"></td>
+                </tr>
+                <tr align="center">
+                    <td><b>MLO'S</b></td>		
+                    <td ><b>CODE</b></td>		
+                    <td><b>2D</b></td>
+                    <td><b>4D</b></td>
+                    <td><b>4H</b></td>
+                    <td><b>45H</b></td>		
+                    <td><b>4RH</b></td>
+                    <td><b>2RF</b></td>
+                    <td><b>2OT</b></td>
+                    <td><b>2FR</b></td>
+                    <td><b>2TK</b></td>
+                    <td><b>4FR</b></td>
+                    <td><b>4OT</b></td>
+                    <td><b>2D</b></td>
+                    <td><b>4D</b></td>
+                    <td><b>4H</b></td>
+                    <td><b>45H</b></td>		
+                    <td><b>4RH</b></td>
+                    <td><b>2RF</b></td>
+                    <td><b>2OT</b></td>
+                    <td><b>2FR</b></td>
+                    <td><b>2TK</b></td>
+                    <td><b>4FR</b></td>
+                    <td><b>4OT</b></td>				
+                    <td><b>TOTAL CONTS</b></td>
+                    <td><b>TOTAL TEUS</b></td>
+                
+                </tr>
+                
+            
+            </thead>
+            <tbody>
+                <tr *ngFor="let mlo_wise_export_report of mlo_wise_export;let i=index;">
+                    <td>{{mlo_wise_export_report.mlo_name}}</td>
+                    <td>{{mlo_wise_export_report.mlo}}</td>
+                    <td>{{mlo_wise_export_report.d_20}}</td>
+                    <td>{{mlo_wise_export_report.d_40}}</td>
+                    <td>{{mlo_wise_export_report.h_40}}</td>
+                    <td>{{mlo_wise_export_report.h_45}}</td>
+                    <td>{{mlo_wise_export_report.rh_40}}</td>
+                    <td>{{mlo_wise_export_report.r_20}}</td>
+                    <td>{{mlo_wise_export_report.ot_20}}</td>
+                    <td>{{mlo_wise_export_report.fr_20}}</td>
+		            <td>{{mlo_wise_export_report.tk_20}}</td>
+		
+                    <td>{{mlo_wise_export_report.fr_40}}</td>
+		            <td>{{mlo_wise_export_report.ot_40}}</td>
+                    <td>{{mlo_wise_export_report.md_20}}</td>
+                    <td>{{mlo_wise_export_report.md_40}}</td>
+                    <td>{{mlo_wise_export_report.mh_40}}</td>
+                    <td>{{mlo_wise_export_report.mh_45}}</td>
+                    <td>{{mlo_wise_export_report.mrh_40}}</td>
+                    <td>{{mlo_wise_export_report.mr_20}}</td>
+                    <td>{{mlo_wise_export_report.mot_20}}</td> 
+                
+                    <td>{{mlo_wise_export_report.mfr_20}}</td>
+                    <td>{{mlo_wise_export_report.mtk_20}}</td>
+                    <td>{{mlo_wise_export_report.mfr_40}}</td>
+                    <td>{{mlo_wise_export_report.mot_40}}</td>
+                    <td>{{mlo_wise_export_report.grand_tot}}</td>
+                    <td>{{mlo_wise_export_report.tues}}</td>
+
+               
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ 
+

@@ -1,0 +1,78 @@
+<table>
+    <tr align="center">
+        <td><img src="assets/images/cpanew.jpg" ></td>
+    </tr>
+    <tr align="left">
+        <td><b>Vessel Name : </b>{{vslName}}</td>
+    </tr>
+    <tr align="left">
+        <td><b>Import Rotation No : </b>{{import_Rotation_No}}</td>
+    </tr>
+</table>
+<!-- <p><b>Vessel Name : </b>{{vslName}}</p> -->
+<!-- <p><b>Import Rotation No : </b>{{import_Rotation_No}}</p> -->
+<table class="table table-bordered   table-hover let i = index; let c = count" align="center">
+    <thead>
+        <tr>
+            <th scope="col">Serial No</th>
+            <th scope="col">MLO Code</th>
+            <th scope="col">Shipping Agent</th>
+            <th scope="col">Line No</th>
+            <th scope="col">Container Number</th>
+            <th scope="col">UN NO</th>
+            <th scope="col">IMDG CODE</th>
+            <th scope="col">Pack Name & Quantity</th>
+            <th scope="col">Container Description</th>
+            <th scope="col">Container Type</th>
+            <th scope="col">TARE WEIGHT</th>
+            <th scope="col">Gross Weight</th>
+            <th scope="col">Container Seal Number</th>
+            <th scope="col">Pack Marks Number</th>
+            <th scope="col">Depu Code</th>
+            <th scope="col">Description Of Good</th>
+            <th scope="col">Commodity List</th>
+            <th scope="col">Navy Comments</th>
+            <th scope="col">Date of Comments</th>
+            <th scope="col">SL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bor of bOptRpt;let i = index; let c = count">
+            <td>{{bor.serial_No}}</td>
+            <td>{{bor.mlocode}}</td>
+            <td>{{bor.organization_Name}}</td>
+            <td>{{bor.line_No}}</td>
+            <td>{{bor.cont_number}}</td>
+            <td>{{bor.un}}</td>
+            <td>{{bor.imco}}</td>
+            <td>{{bor.pack_Description}}{{bor.pack_Number}}</td>
+            <td>{{bor.cont_size}}{{bor.cont_status}}{{bor.cont_height}}</td>
+            <td>{{bor.cont_type}}</td>
+            <td>{{bor.cont_weight}}</td>
+            <td>{{bor.cont_gross_weight}}</td>            
+            <td>{{bor.cont_seal_number}}</td>
+            <td>{{bor.pack_Marks_Number}}</td>
+            <td>{{bor.depu}}</td>
+            <td>{{bor.dg}}</td>
+            <td>{{bor.commudity_desc}}</td>            
+            
+            <td>
+                <span *ngIf="bor.final_amendment==4; then bor.hold_application"></span>
+                <span *ngIf="bor.final_amendment==5; then bor.rejected_application"></span>
+                <span *ngIf="bor.final_amendment==2; then bor.response_details2"></span>
+                <span *ngIf="bor.final_amendment==1; then bor.response_details3 else elseBlock_1"></span>
+            </td>
+            <td>
+                <span *ngIf="bor.final_amendment==4; then bor.hold_date"></span>
+                <span *ngIf="bor.final_amendment==5; then bor.rejected_date"></span>
+                <span *ngIf="bor.final_amendment==2; then bor.secondapprovaltime"></span>
+                <span *ngIf="bor.final_amendment==1; then bor.thirdapprovaltime else elseBlock_2"></span>
+            </td>
+            
+            <td>{{i+1}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #elseBlock_1>&nbsp;</ng-template>
+<ng-template #elseBlock_2>&nbsp;</ng-template>

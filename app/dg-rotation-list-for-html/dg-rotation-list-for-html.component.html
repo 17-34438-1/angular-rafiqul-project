@@ -1,0 +1,60 @@
+<div class="row">
+  
+    <div class="col-12">
+   
+        <div style="margin-left: 550px;">
+            <div>
+                <img width="250px" height="80px" src="../../assets/img/cpanew.jpg" class="cpa-logo">
+            </div>
+            
+        </div>
+        <h3>DG CONTAINER DISCHARGE LIST</h3>
+        <h3>Rotation: {{rotation_no}}</h3>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">SL No</th>
+                    <th scope="col">Container No</th>
+                    <th scope="col">Size</th>
+                   
+                    <th scope="col">Height</th>
+                  
+                    <th scope="col">MLO</th>
+                   
+                    <th scope="col">Destination</th>
+                    <th scope="col">IMDG Class</th>
+                    <th scope="col">UN No</th>
+                    <th scope="col">Description_of_Goods</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Status </th>
+                  
+                    
+    
+                </tr>
+            </thead>
+            <tbody>
+                <!-- *ngFor="let gang of gangs" -->
+                <tr  *ngFor="let dgInfoData of dgInfo;let i = index;">
+                   <td>{{i+1}}</td>
+                    <td>{{dgInfoData.cont_number}}</td>
+                    <td>{{dgInfoData.cont_size}}</td>
+                    <td>{{dgInfoData.cont_height}}</td>
+                    <td>{{dgInfoData.mlocode}}</td>
+              
+                    <td>{{dgInfoData.off_dock_id}}</td>
+                    <td>{{dgInfoData.cont_imo}}</td>
+                    
+                    <td>{{dgInfoData.cont_un}}</td>
+                    <td>{{dgInfoData.description_of_Goods}}</td>
+
+                    <td>{{dgInfoData.cont_gross_weight}}</td>
+                    <td>{{dgInfoData.cont_status}}</td>
+                    
+                   
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,75 @@
+
+<!--app-headertop></app-headertop-->
+<div class="row">
+    <div class="col-3">
+        <!--app-sidebar></app-sidebar-->
+    </div>
+    <div class="col-12 mt-4">
+       
+        <img align="center" src="../../assets/img/logo_cpa.gif" class="rounded mx-auto d-block" alt="..." width="250px" height="80px">
+
+        <h3 align="center">EQUIPMENT HANDLING PERFORMANCE HISTORY</h3>
+        <div class="row">
+            <div class="col-4">
+                <h5 align="center">From Date : {{fromDate}}</h5>
+            </div>
+            <div class="col-4">
+                <h5 *ngIf="show" align="center">To Date : {{toDate}}</h5>
+            </div>
+            <div class="col-4">
+                <h5 align="center">Shift : {{shift}}</h5>
+            </div>
+        </div>
+      
+
+    
+   
+        <table class="table table-responsive-sm table-responsive table-bordered table-condensed table-striped table-hover table-fixed table-sm" id="equipmentListTable"  width="100%" >
+            <thead>
+                <tr>
+                    
+                    <td style="border-width:3px;border-style: double;"><b>SlNo.</b></td>
+		<td style="border-width:3px;border-style: double;"><b>RTG # NO.</b></td>
+		<td style="border-width:3px;border-style: double;"><b>Start VMT Log in Time</b></td>
+		<td style="border-width:3px;border-style: double;"><b>End VMT Log out Time</b></td>
+		<td style="border-width:3px;border-style: double;"><b>ID NO</b></td>
+		<td style="border-width:3px;border-style: double;"><b>RTG Operator Name</b></td>		
+		<td style="border-width:3px;border-style: double;"><b>Import Receiving</b></td>
+		<td style="border-width:3px;border-style: double;"><b>Keep Down / Delivery</b></td>
+		<td style="border-width:3px;border-style: double;"><b>Delivery (OCD / Off Dock)</b></td>
+		<td style="border-width:3px;border-style: double;"><b>Shifting</b></td>
+		<td style="border-width:3px;border-style: double;"><b>Total Handling Boxes</b></td>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let result  of resultList | filter: searchText;let i = index;let c = count">
+                    <td scope="col" align="center">{{i+1}}</td>
+                    <td scope="col" align="center">{{result.eq}}</td>
+                    <td align="center">{{result.log_In}}</td>
+                    <td align="center">{{result.log_Out}}</td>                 
+                    <td  align="center">{{result.logBy}}</td>           
+                    <td  align="center">{{result.short_name}}</td>
+                    <td scope="col" align="center">{{result.impRcv}}</td>
+                    <td scope="col" align="center">{{result.keepDlv}}</td>
+                    <td scope="col" align="center">{{result.dlvOcdOffDock}}</td>   
+                    <td scope="col" align="center">{{result.shift}}</td> 
+                    <td scope="col" align="center">{{result.totalHandingBox}}</td>                   
+                </tr>
+                <tr bgcolor="#E0FFFF" align="center">
+                    <td  colspan="6"><font size="4"><b>Total:</b></font></td>                  
+                    <td scope="col"><font size="4"><b>{{imRtotal}}</b></font></td>
+                    <td scope="col"><font size="4"><b>{{keepDTotal}}</b></font></td>
+                    <td scope="col"><font size="4"><b>{{dOffTotal}}</b></font></td>    
+                    <td scope="col"><font size="4"><b>{{shiftTotal}}</b></font></td>   
+                    <td scope="col"><font size="4"><b>{{total}}</b></font></td>                   
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+   
+</div>
+
+
+
